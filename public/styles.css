@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  font-family: 'Merriweather', serif;
 }
 
 
@@ -39,22 +40,31 @@ body{
 
 .search{
   border-style: none none solid none;
-  border-color: #e7305b;
+  border-radius: 0;
+  height: 30px;
+  border-color: #000731;
   background-color: rgba(0,0,0,0);
   outline: none;
   width: 15rem;
   text-align: center;
-  color: #bf0f39;
+  color: #cccccc;
   font-size: 1.4rem;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .search::placeholder{
-  color: #e7305b;
+  color: #b2b2b2;
 }
 
 @keyframes expand {
   0% {
     width: 15rem;
+  }
+  15%{
+    with: 10%%;
+  }
+  90%{
+    width: 44%;
   }
   100% {
     width: 45%;
@@ -62,15 +72,16 @@ body{
 }
 
 .search:focus{
-  border-style: none none solid none;
   animation: expand 0.2s 1;
   width: 45%;
   background-color: rgba(0,0,0,0);
+  font-family: 'Ubuntu Mono', monospace;
 }
 
+/* Zoeken */
+
+
 /* overzicht button */
-
-
 
 .btn {
   background: #000731;
