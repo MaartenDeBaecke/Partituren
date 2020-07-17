@@ -1,0 +1,127 @@
+body{
+  margin: 0;
+}
+
+
+.banner{
+  text-align: center;
+  padding-top: 5rem;
+  background-image: url("sky.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0 40%;
+  background-size: cover;
+  height: 45rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameTitle{
+  font-family: 'Merriweather', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #000731;
+}
+
+.nameSubTitle{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  margin-top: -2.5rem;
+  font-style: italic;
+  color: #3b2e5a;
+}
+
+.searchForm{
+  margin: 10rem 0;
+
+}
+
+
+.search{
+  border-style: none none solid none;
+  border-color: #e7305b;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  width: 15rem;
+  text-align: center;
+  color: #bf0f39;
+  font-size: 1.4rem;
+}
+
+.search::placeholder{
+  color: #e7305b;
+}
+
+@keyframes expand {
+  0% {
+    width: 15rem;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+.search:focus{
+  border-style: none none solid none;
+  animation: expand 0.2s 1;
+  width: 45%;
+  background-color: rgba(0,0,0,0);
+}
+
+/* overzicht button */
+
+
+
+.btn {
+  background: #000731;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+
+  position: relative;
+  transition: 0.75s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 0px;
+  text-align: center;
+  display: inline-block;
+}
+
+#circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
