@@ -1,0 +1,138 @@
+body{
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+
+
+.banner{
+  text-align: center;
+  padding-top: 5rem;
+  background-image: url("sky.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0 40%;
+  background-size: cover;
+  height: 45rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameTitle{
+  font-family: 'Merriweather', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #000731;
+}
+
+.nameSubTitle{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  margin-top: -2.5rem;
+  font-style: italic;
+  color: #3b2e5a;
+}
+
+.searchForm{
+  margin: 10rem 0;
+
+}
+
+
+.search{
+  border-style: none none solid none;
+  border-radius: 0;
+  height: 30px;
+  border-color: #000731;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  width: 15rem;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1.4rem;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.search::placeholder{
+  color: #b2b2b2;
+}
+
+@keyframes expand {
+  0% {
+    width: 15rem;
+  }
+  15%{
+    with: 10%%;
+  }
+  90%{
+    width: 44%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+.search:focus{
+  animation: expand 0.2s 1;
+  width: 45%;
+  background-color: rgba(0,0,0,0);
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/* Zoeken */
+
+
+/* overzicht button */
+
+.btn {
+  background: #000731;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+
+  position: relative;
+  transition: 0.75s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 0px;
+  text-align: center;
+  display: inline-block;
+}
+
+#circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
