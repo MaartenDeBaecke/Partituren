@@ -15,7 +15,11 @@ function Element(){
             <p>Telt 5 pagina’s,</p>
             <p>Gepubliceerd in 2003</p>
           </div>
-          <button class="desbtn"><i class="fas fa-square fa-1x"></i>   Koop nu</button>
+          <div className="desbtn">
+            <button className="buybtn"><i class="fas fa-file-import icon"></i>Koop nu</button>
+
+            <button className="playbtn">&nbsp;<i class="fas fa-play" ></i></button>
+          </div>
         </div>
       </Jumbotron>
     </Container>

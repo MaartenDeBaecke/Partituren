@@ -84,16 +84,16 @@ body{
 /* overzicht button */
 
 .btn {
-  background: #000731;
+  background: #000731 !important;
   width: 150px;
   border: none;
   border-radius: 10px;
-  color: #eee;
+  color: #eee !important;
   font-size: 20px;
   font-family: 'Merriweather', serif;
 
   position: relative;
-  transition: 0.75s;
+  transition: 1.15s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
@@ -126,11 +126,11 @@ body{
 }
 
 .btn:hover {
-  background: transparent;
+  background: transparent !important;
 }
 
 .btn:hover #circle {
-  height: 50px;
+  height: 37px;
   width: 150px;
   left: 0;
   border-radius: 0;
@@ -178,7 +178,7 @@ body{
 }
 
 .cardSub{
-  margin-top: 20px;
+  margin-top: 30px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
 }
@@ -190,14 +190,78 @@ body{
 }
 
 .desbtn{
-  border: none;
-  border-radius: 7px;
-  background-color: #3b2e5a;
-  color: white;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  position: absolute;
-  height: 38px;
-  top: 300px;
+}
 
+.buybtn{
+  border: 1px solid rgb(146, 148, 248);
+  background-color: rgba(0,0,0,0);
+  color: rgb(255, 200, 248);
+  position: absolute;
+  height: 42px;
+  top: 300px;
+  width: 130px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.buybtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.3),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.buybtn:hover:before {
+  left: 100%;
+}
+.icon{
+  margin-right: 10px;
+  margin-left: 3px;
+}
+
+.playbtn{
+  border: 1px solid rgb(255, 90, 120);
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0);
+  color: #ff3232;
+  position: absolute;
+  height: 42px;
+  top: 300px;
+  right: 10px;
+  width: 42px;
+  text-align: center;
+  z-index: 1;
+  transition: all 650ms;
+}
+
+.playbtn:hover{
+  animation: pulse 1s 1;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(255, 90, 100, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }
