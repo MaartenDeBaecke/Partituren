@@ -27,7 +27,7 @@ body{
 .nameSubTitle{
   font-family: 'Dancing Script', cursive;
   font-size: 2.2rem;
-  margin-top: -2.5rem;
+  margin-top: -1rem;
   font-style: italic;
   color: #3b2e5a;
 }
@@ -135,4 +135,69 @@ body{
   left: 0;
   border-radius: 0;
   border-bottom: 2px solid #eee;
+}
+
+
+/*Card*/
+.catalog{
+  background-color: white;
+}
+
+.cardContainer{
+  padding: 0;
+  margin: 0;
+}
+
+.card{
+  margin: 0;
+  background-color: #000731 !important ;
+  border: none !important;
+  height: 360px;
+  width: 510px;
+}
+
+.cardImg{
+  height: 360px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.description{
+  position: absolute;
+  left: 265px;
+  top: 0;
+  padding: 15px 10px;
+}
+
+.cardHeader{
+  font-family: 'Arizonia', cursive;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.cardSub{
+  margin-top: 20px;
+  color: #b2b2b2;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.extras{
+  margin-top: 36px;
+  color: #b2b2b2;
+  line-height: 0.3;
+}
+
+.desbtn{
+  border: none;
+  border-radius: 7px;
+  background-color: #3b2e5a;
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  height: 38px;
+  top: 300px;
+
 }
