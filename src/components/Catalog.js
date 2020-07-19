@@ -1,5 +1,5 @@
 import React from "react";
-import Element from "./Card";
+import Element from "./card/Card";
 
 function Catalog(){
   return(
@@ -15,7 +15,7 @@ function Catalog(){
       <br/>
       <br/>
       <br/>
-      <br/> 
+      <br/>
       <br/>
       <br/>
       <br/>
