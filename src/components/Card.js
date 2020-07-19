@@ -7,7 +7,7 @@ function Element(){
   return(
     <Container className="cardContainer">
       <Jumbotron className="card">
-        <img className="cardImg" src="https://www.euprint.be/sites/default/files_production/styles/cover_list/public/covers/9790365412648-00_2.jpg?itok=pdZhmZOI" alt="dwarsfluit" />
+        <img className="cardImg" src="https://www.euprint.be/sites/default/files_production/styles/cover_list/public/covers/9790365412648-00_0.jpg?itok=Zu_ZRVaf" alt="dwarsfluit" />
         <div className="description">
           <h2 className="cardHeader">Morning Blue</h2>
           <p className="cardSub">For Flute Solo</p>
