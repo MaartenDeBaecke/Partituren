@@ -11,7 +11,7 @@ function Banner() {
       <Overzicht />
     </div>
   );
-}
+} 
 
 
 export default Banner;
