@@ -1,16 +1,14 @@
 import React from 'react';
 import Search from './search';
-
+import Header from './Header';
+import Overzicht from './Overzicht';
 
 function Banner() {
   return(
     <div className="banner">
-      <h1 className="nameTitle">Steven De Baecke</h1>
-      <p className="nameSubTitle">partituren</p>
+      <Header />
       <Search />
-      <div className="btn">
-        <span className="noSelect">Overzicht</span><div id="circle">
-      </div></div>
+      <Overzicht />
     </div>
   );
 }

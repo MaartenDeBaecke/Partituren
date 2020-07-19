@@ -1,9 +1,13 @@
 import React from 'react';
 import Banner from './banner';
+import Catalog from './Catalog';
 
 function App() {
   return(
-    <Banner />
+    <div>
+      <Banner />
+      <Catalog />
+    </div>
   );
 }
 
