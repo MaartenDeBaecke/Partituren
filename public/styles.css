@@ -13,7 +13,7 @@ body{
   background-attachment: fixed;
   background-position: 0 40%;
   background-size: cover;
-  height: 45rem;
+  height: 50rem;
   align-items: center;
   justify-content: center;
 }
@@ -142,7 +142,7 @@ body{
 /*Card*/
 
 .cardContainer{
-  padding: 0;
+  padding: 0 !important;
   margin: 0;
 }
 
@@ -325,10 +325,47 @@ body{
 /*Catalog*/
 .catalog{
   background-color: white;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .catalogContainer{
-  margin: 0 !important;
-  max-width: 100% !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+@media(min-width: 1600px){
+  .catalogContainer{
+    max-width: 1600px !important;
+  }
+}
+
+@media (min-width: 1430px){
+  .col-lg-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+  }
+  .catalogContainer{
+    max-width: 1430px !important;
+  }
+}
+
+@media (max-width: 1430px){
+  .col-lg-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  .catalogContainer{
+    max-width: 1000px !important;
+  }
+}
+
+@media (max-width: 960px){
+  .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .catalogContainer{
+    max-width: 500px !important;
+  }
 }

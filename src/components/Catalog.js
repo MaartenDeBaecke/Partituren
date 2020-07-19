@@ -13,9 +13,15 @@ function Catalog(){
 
       <Container className="catalogContainer">
         <Row class="row">
-          <Col lg={4} md={6}><Element /></Col>
-          <Col lg={4} md={6}><Element /></Col>
-          <Col lg={4} md={6}><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
+          <Col className="col-lg-4"><Element /></Col>
         </Row>
       </Container>
     </div>
