@@ -140,22 +140,18 @@ body{
 
 
 /*Card*/
-.catalog{
-  background-color: white;
-}
 
 .cardContainer{
   padding: 0;
   margin: 0;
-
 }
 
 .card{
   margin: 0;
   background-color: #000731 !important ;
   border: none !important;
-  height: 360px;
-  width: 510px;
+  height: 324.71px;
+  width: 460px;
 }
 
 .container .jumbotron {
@@ -163,7 +159,7 @@ body{
 }
 
 .cardImg{
-  height: 360px;
+  height: 324.71px;
   position: absolute;
   top: 0;
   left: 0;
@@ -173,31 +169,31 @@ body{
 
 .description{
   position: absolute;
-  left: 265px;
+  left: 239px;
   top: 0;
-  padding: 15px 10px;
+  padding: 13.5px 9px;
 }
 
 .cardHeader{
   font-family: 'Arizonia', cursive;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 .cardSub{
-  margin-top: 30px;
+  margin-top: 27.1px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
 }
 
 .extras{
-  margin-top: 36px;
+  margin-top: 32.5px;
   color: #b2b2b2;
-  line-height: 0.3;
+  line-height: 0.27;
 }
 
 .desbtn{
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -206,9 +202,9 @@ body{
   background-color: rgba(0,0,0,0);
   color: rgb(255, 200, 248);
   position: absolute;
-  height: 42px;
-  top: 300px;
-  width: 130px;
+  height: 37.9px;
+  top: 270.6px;
+  width: 117.3px;
   text-align: center;
   overflow: hidden;
 }
@@ -249,9 +245,9 @@ body{
   }
 }
 .buybtn:active{
-  webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  webkit-animation: glow 0.7s ease-in-out infinite alternate;
+  -moz-animation: glow 0.7s ease-in-out infinite alternate;
+  animation: glow 0.7s ease-in-out infinite alternate;
 }
 
 .buybtn:focus{
@@ -261,8 +257,8 @@ body{
 
 
 .icon{
-  margin-right: 10px;
-  margin-left: -3px;
+  margin-right: 9px;
+  margin-left: -2.7px;
 }
 
 .playbtn{
@@ -270,10 +266,10 @@ body{
   border-radius: 25px;
   background-color: rgba(0,0,0,0);
   position: absolute;
-  height: 42px;
-  top: 300px;
-  right: 10px;
-  width: 42px;
+  height: 37.9px;
+  top: 270.6px;
+  right: 9px;
+  width: 37.9px;
   text-align: center;
   z-index: 1;
   transition: pulse 650ms;
@@ -285,10 +281,10 @@ body{
 
 .playbtn:active{
   transition: all 50ms;
-  top: 301.75px;
-  right: 11.75px;
-  height: 39px;
-  width: 39px;
+  top: 271.95px;
+  right: 10.35px;
+  height: 35.2px;
+  width: 35.2px;
 }
 
 .playbtn:focus{
@@ -322,4 +318,17 @@ body{
 
 .playLink:touch{
   color: #ff3232;
+}
+
+
+
+/*Catalog*/
+.catalog{
+  background-color: white;
+  width: 100%;
+}
+
+.catalogContainer{
+  margin: 0 !important;
+  max-width: 100% !important;
 }
