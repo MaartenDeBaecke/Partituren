@@ -7,13 +7,13 @@ import Header from './header';
 import Body from './body';
 import Footer from './footer';
 
-function Element(){
+function Card(props){
   return(
     <Container className="cardContainer">
       <Jumbotron className="card">
-        <Img />
+        <Img url={props.link}/>
         <div className="description">
-          <Header />
+          <Header head={props.title} />
           <Body />
           <Footer />
         </div>
@@ -23,4 +23,4 @@ function Element(){
 }
 
 
-export default Element;
+export default Card;

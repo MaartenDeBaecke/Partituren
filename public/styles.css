@@ -151,6 +151,11 @@ body{
   background-color: #000731 !important ;
   border: none !important;
   height: 324.71px;
+  width: 250px;
+  transition: all 300ms;
+}
+
+.card:hover{
   width: 460px;
 }
 
@@ -164,21 +169,49 @@ body{
   top: 0;
   left: 0;
   border-radius: 1.5px 0 0 1.5px;
-
+  z-index: 2;
+  transition: all 300ms;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 
 .description{
   position: absolute;
-  left: 239px;
+  left: 29px;
   top: 0;
   padding: 13.5px 9px;
+  transition: all 300ms;
+  width: 221px;
+  height: 100%;
+}
+
+.description:hover{
+  left: 239px;
+}
+
+.cardImg:hover ~ .description{
+  left: 239px;
+}
+
+.cardImg:hover {
+  box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
 }
 
 .cardHeader{
   font-family: 'Arizonia', cursive;
   color: white;
-  font-size: 2.25rem;
+  font-size: 2.05rem;
+  background-color: #000731;
+  z-index: 5;
+  position: relative;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  width: 106%;
+  padding-right: 5px;
+  padding-left: 10px;
+  text-align: left;
+  right: 6px;
 }
+
 
 .cardSub{
   margin-top: 27.1px;
