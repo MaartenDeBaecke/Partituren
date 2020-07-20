@@ -10,9 +10,9 @@ import Footer from './footer';
 function Card(props){
   return(
     <Container className="cardContainer">
-      <Jumbotron className="card">
+      <Jumbotron id="card">
         <Img url={props.link}/>
-        <div className="description">
+        <div id="description">
           <Header head={props.title} />
           <Body />
           <Footer />
