@@ -370,17 +370,35 @@ body{
 
 
 /*Catalog*/
+
+
+
 .catalog{
-  background-color: white;
+
   max-width: 1600px !important;
   overflow: hidden;
   margin: auto !important;
-
+  line-height: 1.3 !important;
 }
 
 .catalogContainer{
   max-width: 100% !important;
 }
+
+.catalogHeader{
+  background-color: #000731;
+  color: white;
+  font-family: monospace;
+  font-size: 1.7rem;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10%;
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: light;
+}
+
+
 
 .col{
   margin-left: 0px;
