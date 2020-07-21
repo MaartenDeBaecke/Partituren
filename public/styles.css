@@ -146,7 +146,7 @@ body{
 }
 
 #card{
-  margin: 30px 75px;
+  margin: 30px 60px;
   background-color: #000731 !important ;
   border: none !important;
   height: 379.91px;
@@ -154,27 +154,28 @@ body{
   transition: all 300ms;
 }
 
-#card:hover{
-  width: 517.5px;
-  margin-left: -35px;
+#card:hover > #description{
+  left: 240px;
 }
 
-#card:hover > #description{
-  left: 255px;
+#card:hover{
+  width: 517.5px;
+  margin-left: -45px;
 }
 
 #card:hover > #cardImg {
   box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
-  left: -20.4px;
+  left: -40.4px;
 }
 
 #card:hover #cardHeader{
-  width: 104%;
+  width: 103%;
 }
 
 #card:hover #playbtn{
-  right: 25.83px;
+  right: 35px;
 }
+
 
 .container .jumbotron {
   border-radius: 1.5px ;
@@ -184,7 +185,7 @@ body{
   height: 379.917px;
   position: absolute;
   top: 30px;
-  left: 90px;
+  left: 75px;
   border-radius: 1.5px 0 0 1.5px;
   z-index: 2;
   transition: all 300ms;
@@ -193,7 +194,7 @@ body{
 
 #description{
   position: absolute;
-  left: 125px;
+  left: 120px;
   top: 27px;
   padding: 15.795px 10.53px;
   transition: all 300ms;
@@ -210,11 +211,11 @@ body{
   position: relative;
   padding-left: 5.85px;
   padding-bottom: 2.34px;
-  width: 109.5%;
+  width: 104%;
   padding-right: 9.45px;
   padding-left: 11.7px;
   text-align: left;
-  right: 16.02px;
+  right: 14.02px;
 }
 
 
@@ -307,7 +308,7 @@ body{
   position: absolute;
   height: 44.343px;
   top: 316.602px;
-  right: 10.53px;
+  right: 23.53px;
   width: 44.343px;
   text-align: center;
   z-index: 1;
@@ -320,10 +321,10 @@ body{
 
 #playbtn:active{
   transition: all 50ms;
-  top: 318.1815px;
-  right: 27.1395px !important;
+  top: 319.1815px;
+  right: 36.5px !important;
   height: 41.184px;
-  width: 41.184x;
+  width: 41.184px;
 }
 
 #playbtn:focus{
@@ -345,6 +346,13 @@ body{
 		transform: scale(1);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
+}
+
+.alert{
+  position: fixed;
+    top:0;
+    background-color: #f00;
+    height: 100px; width: 100%;
 }
 
 .playLink{
@@ -385,32 +393,54 @@ body{
 }
 
 
-@media (min-width: 1430px){
+@media (min-width: 1425px){
   .col {
     flex: 0 0 33.333333% !important;
     max-width: 33.333333% !important;
   }
   .catalogContainer{
-    max-width: 1430px !important;
+    max-width: 1300px !important;
   }
 }
 
-@media (max-width: 1430px){
+@media (max-width: 1425px){
   .col {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
   .catalogContainer{
-    max-width: 1000px !important;
+    max-width: 900px !important;
   }
 }
 
-@media (max-width: 960px){
+@media (max-width: 1000px){
   .col {
     flex: 0 0 100% !important;
     max-width: 100% !important;
   }
   .catalogContainer{
     max-width: 500px !important;
+  }
+
+  #description{
+    left: 240px;
+  }
+
+  #card{
+    width: 517.5px;
+    margin-left: -45px;
+  }
+
+  #cardImg {
+    box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
+    left: -40.4px;
+  }
+
+  #cardHeader{
+    width: 103%;
+  }
+
+  #playbtn{
+    right: 35px;
   }
 }
