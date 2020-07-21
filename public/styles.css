@@ -146,32 +146,34 @@ body{
 }
 
 #card{
-  margin: 13px;
+  margin: 30px 75px;
   background-color: #000731 !important ;
   border: none !important;
-  height: 422.123px;
-  width: 305.5px;
+  height: 379.91px;
+  width: 291px;
   transition: all 300ms;
 }
 
 #card:hover{
-  width: 575px;
+  width: 517.5px;
+  margin-left: -35px;
 }
 
 #card:hover > #description{
-  left: 320.7px;
+  left: 255px;
 }
 
 #card:hover > #cardImg {
   box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
+  left: -20.4px;
 }
 
 #card:hover #cardHeader{
-  width: 105%;
+  width: 104%;
 }
 
 #card:hover #playbtn{
-  right: 28.7px;
+  right: 25.83px;
 }
 
 .container .jumbotron {
@@ -179,10 +181,10 @@ body{
 }
 
 #cardImg{
-  height: 422.123px;
+  height: 379.917px;
   position: absolute;
-  top: 13px;
-  left: 13px;
+  top: 30px;
+  left: 90px;
   border-radius: 1.5px 0 0 1.5px;
   z-index: 2;
   transition: all 300ms;
@@ -191,46 +193,46 @@ body{
 
 #description{
   position: absolute;
-  left: 44.2px;
-  top: 13px;
-  padding: 17.55px 11.7px;
+  left: 125px;
+  top: 27px;
+  padding: 15.795px 10.53px;
   transition: all 300ms;
-  width: 287.3px;
+  width: 258.57px;
   height: 100%;
 }
 
 #cardHeader{
   font-family: 'Arizonia', cursive;
   color: white;
-  font-size: 2.6rem;
+  font-size: 2.34rem;
   background-color: #000731;
   z-index: 5;
   position: relative;
-  padding-left: 6.5px;
-  padding-bottom: 2.6px;
+  padding-left: 5.85px;
+  padding-bottom: 2.34px;
   width: 109.5%;
-  padding-right: 10.5px;
-  padding-left: 13px;
+  padding-right: 9.45px;
+  padding-left: 11.7px;
   text-align: left;
-  right: 17.8px;
+  right: 16.02px;
 }
 
 
 .cardSub{
-  margin-top: 15.23px;
+  margin-top: 13.707px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 1.3rem;
+  font-size: 1.17rem;
 }
 
 .extras{
-  margin-top: 42.25px;
+  margin-top: 38.025px;
   color: #b2b2b2;
   line-height: 0.3;
 }
 
 .desbtn{
-  font-size: 23.4px;
+  font-size: 21.06px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -239,9 +241,9 @@ body{
   background-color: rgba(0,0,0,0);
   color: rgb(255, 200, 248);
   position: absolute;
-  height: 49.27px;
-  top: 351.78px;
-  width: 152.49px;
+  height: 44.343px;
+  top: 316.602px;
+  width: 137.241px;
   text-align: center;
   overflow: hidden;
 }
@@ -294,8 +296,8 @@ body{
 
 
 .icon{
-  margin-right: 11.7px;
-  margin-left: -3.51px;
+  margin-right: 10.53px;
+  margin-left: -3.159px;
 }
 
 #playbtn{
@@ -303,10 +305,10 @@ body{
   border-radius: 30px;
   background-color: rgba(0,0,0,0);
   position: absolute;
-  height: 49.27px;
-  top: 351.78px;
-  right: 11.7px;
-  width: 49.27px;
+  height: 44.343px;
+  top: 316.602px;
+  right: 10.53px;
+  width: 44.343px;
   text-align: center;
   z-index: 1;
   transition: pulse 650ms;
@@ -318,10 +320,10 @@ body{
 
 #playbtn:active{
   transition: all 50ms;
-  top: 353.535px;
-  right: 30.455px !important;
-  height: 45.76px;
-  width: 45.76px;
+  top: 318.1815px;
+  right: 27.1395px !important;
+  height: 41.184px;
+  width: 41.184x;
 }
 
 #playbtn:focus{
@@ -362,13 +364,18 @@ body{
 /*Catalog*/
 .catalog{
   background-color: white;
-  max-width: 100%;
+  max-width: 1600px !important;
   overflow: hidden;
+  margin: auto !important;
+
 }
 
 .catalogContainer{
-  margin: 0 auto !important;
-  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.col{
+  margin-left: 0px;
 }
 
 @media(min-width: 1600px){
@@ -377,19 +384,19 @@ body{
   }
 }
 
-/*
+
 @media (min-width: 1430px){
-  .col-lg-4 {
+  .col {
     flex: 0 0 33.333333% !important;
     max-width: 33.333333% !important;
   }
   .catalogContainer{
     max-width: 1430px !important;
   }
-}*/
+}
 
 @media (max-width: 1430px){
-  .col-lg-4 {
+  .col {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
@@ -399,7 +406,7 @@ body{
 }
 
 @media (max-width: 960px){
-  .col-lg-4 {
+  .col {
     flex: 0 0 100% !important;
     max-width: 100% !important;
   }
