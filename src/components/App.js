@@ -5,8 +5,12 @@ import Catalog from './Catalog';
 function App() {
   return(
     <div>
-      <Banner />
-      <Catalog />
+      <section id="banner">
+        <Banner />
+      </section>
+      <section id="overzicht">
+        <Catalog />
+      </section>
     </div>
   );
 }
