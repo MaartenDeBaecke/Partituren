@@ -4,6 +4,7 @@ body{
 }
 
 
+
 .banner{
   text-align: center;
   padding-top: 5rem;
@@ -12,7 +13,7 @@ body{
   background-attachment: fixed;
   background-position: 0 40%;
   background-size: cover;
-  height: 45rem;
+  height: 50rem;
   align-items: center;
   justify-content: center;
 }
@@ -92,7 +93,7 @@ body{
   font-size: 20px;
   font-family: 'Merriweather', serif;
 
-  position: relative;
+  position: static;
   transition: 1.15s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
@@ -109,9 +110,9 @@ body{
   height: 5px;
   background: transparent;
   border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 50%;
+  position: static;
+  margin-top: -5px;
+  margin-left: 3.5rem;
   overflow: hidden;
   transition: 500ms;
 }
@@ -132,65 +133,114 @@ body{
 .btn:hover #circle {
   height: 37px;
   width: 150px;
-  left: 0;
+  margin-top: -2.1rem;
+  margin-left: -0.8rem;
   border-radius: 0;
   border-bottom: 2px solid #eee;
 }
 
+.clickOv{
+  padding: 10px 37px 10px 37px;
+  margin: -15px;
+  background-color: transparent;
+}
+
 
 /*Card*/
-.catalog{
-  background-color: white;
-}
 
 .cardContainer{
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
 }
 
-.card{
-  margin: 0;
+#card{
+  margin: 30px 60px;
   background-color: #000731 !important ;
   border: none !important;
-  height: 360px;
-  width: 510px;
+  height: 379.91px;
+  width: 291px;
+  transition: all 300ms;
 }
 
-.cardImg{
-  height: 360px;
+#card:hover > #description{
+  left: 240px;
+}
+
+#card:hover{
+  width: 517.5px;
+  margin-left: -45px;
+}
+
+#card:hover > #cardImg {
+  box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
+  left: -40.4px;
+}
+
+#card:hover #cardHeader{
+  width: 103%;
+}
+
+#card:hover #playbtn{
+  right: 35px;
+}
+
+
+.container .jumbotron {
+  border-radius: 1.5px ;
+}
+
+#cardImg{
+  height: 379.917px;
   position: absolute;
-  top: 0;
-  left: 0;
-
+  top: 30px;
+  left: 75px;
+  border-radius: 1.5px 0 0 1.5px;
+  z-index: 2;
+  transition: all 300ms;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 
-.description{
+#description{
   position: absolute;
-  left: 265px;
-  top: 0;
-  padding: 15px 10px;
+  left: 120px;
+  top: 27px;
+  padding: 15.795px 10.53px;
+  transition: all 300ms;
+  width: 258.57px;
+  height: 100%;
 }
 
-.cardHeader{
+#cardHeader{
   font-family: 'Arizonia', cursive;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.34rem;
+  background-color: #000731;
+  z-index: 5;
+  position: relative;
+  padding-left: 5.85px;
+  padding-bottom: 2.34px;
+  width: 104%;
+  padding-right: 9.45px;
+  padding-left: 11.7px;
+  text-align: left;
+  right: 14.02px;
 }
 
+
 .cardSub{
-  margin-top: 30px;
+  margin-top: 13.707px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.17rem;
 }
 
 .extras{
-  margin-top: 36px;
+  margin-top: 38.025px;
   color: #b2b2b2;
   line-height: 0.3;
 }
 
 .desbtn{
-  font-size: 20px;
+  font-size: 21.06px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -199,10 +249,10 @@ body{
   background-color: rgba(0,0,0,0);
   color: rgb(255, 200, 248);
   position: absolute;
-  height: 42px;
-  top: 300px;
-  width: 130px;
-  text-align: left;
+  height: 44.343px;
+  top: 316.602px;
+  width: 137.241px;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -216,7 +266,7 @@ body{
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(146, 148, 248, 0.3),
+    rgba(176, 148, 248, 0.4),
     transparent
   );
   transition: all 650ms;
@@ -225,28 +275,67 @@ body{
 .buybtn:hover:before {
   left: 100%;
 }
-.icon{
-  margin-right: 10px;
-  margin-left: 3px;
+
+.buybtn:active:before{
+  transition: all 180ms;
+  left: 0;
+
 }
 
-.playbtn{
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 6px #3b2e5a, 0 0 10px #3b2e5a, 0 0 15px #3b2e5a;
+  }
+
+  to {
+    box-shadow: 0 0 3px #fff, 0 0 6px rgba(146, 148, 248, 0.3), 0 0 10px rgba(146, 148, 248, 0.3), 0 0 15px rgba(146, 148, 248, 0.3), 0 0 20px rgba(146, 148, 248, 0.3);
+  }
+}
+.buybtn:active{
+  webkit-animation: glow 0.7s ease-in-out infinite alternate;
+  -moz-animation: glow 0.7s ease-in-out infinite alternate;
+  animation: glow 0.7s ease-in-out infinite alternate;
+}
+
+.buybtn:focus{
+  outline: none;
+}
+
+
+
+.icon{
+  margin-right: 10.53px;
+  margin-left: -3.159px;
+}
+
+#playbtn{
   border: 1px solid rgb(255, 90, 120);
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: rgba(0,0,0,0);
-  color: #ff3232;
   position: absolute;
-  height: 42px;
-  top: 300px;
-  right: 10px;
-  width: 42px;
+  height: 44.343px;
+  top: 316.602px;
+  right: 23.53px;
+  width: 44.343px;
   text-align: center;
   z-index: 1;
-  transition: all 650ms;
+  transition: pulse 650ms;
 }
 
-.playbtn:hover{
-  animation: pulse 1s 1;
+#playbtn:hover{
+  animation: pulse 0.9s 1;
+}
+
+#playbtn:active{
+  transition: all 50ms;
+  top: 319.1815px;
+  right: 36.5px !important;
+  height: 41.184px;
+  width: 41.184px;
+}
+
+#playbtn:focus{
+  outline: none;
 }
 
 @keyframes pulse {
@@ -264,4 +353,119 @@ body{
 		transform: scale(1);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
+}
+
+.alert{
+  position: fixed;
+    top:0;
+    background-color: #f00;
+    height: 100px; width: 100%;
+}
+
+.playLink{
+  color: #ff3232;
+}
+
+.playLink:hover{
+  color: #ff3232;
+}
+
+.playLink:touch{
+  color: #ff3232;
+}
+
+
+
+/*Catalog*/
+
+
+
+.catalog{
+
+  max-width: 1600px !important;
+  overflow: hidden;
+  margin: auto !important;
+  line-height: 1.3 !important;
+}
+
+.catalogContainer{
+  max-width: 100% !important;
+}
+
+.catalogHeader{
+  background-color: #000731;
+  color: white;
+  font-family: monospace;
+  font-size: 1.7rem;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10%;
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: light;
+}
+
+
+
+.col{
+  margin-left: 0px;
+}
+
+@media(min-width: 1600px){
+  .catalogContainer{
+    max-width: 1600px !important;
+  }
+}
+
+
+@media (min-width: 1425px){
+  .col {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+  }
+  .catalogContainer{
+    max-width: 1300px !important;
+  }
+}
+
+@media (max-width: 1425px){
+  .col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  .catalogContainer{
+    max-width: 900px !important;
+  }
+}
+
+@media (max-width: 1000px){
+  .col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .catalogContainer{
+    max-width: 500px !important;
+  }
+
+  #description{
+    left: 240px;
+  }
+
+  #card{
+    width: 517.5px;
+    margin-left: -45px;
+  }
+
+  #cardImg {
+    box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
+    left: -40.4px;
+  }
+
+  #cardHeader{
+    width: 103%;
+  }
+
+  #playbtn{
+    right: 35px;
+  }
 }
