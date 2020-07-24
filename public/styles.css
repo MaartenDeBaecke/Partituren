@@ -473,13 +473,13 @@ body{
 /* Create */
 
 .create {
-  background-color: #eddfed;
-  padding: 10%;
+  background-color: white;
+  padding: 5rem;
 }
 
 .formCard{
   max-width: 38rem;
-  margin: 3rem auto;
+  margin: auto;
   background-color: #000731;
   color: white;
   border: none;
