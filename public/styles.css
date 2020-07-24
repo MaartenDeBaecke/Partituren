@@ -469,3 +469,73 @@ body{
     right: 35px;
   }
 }
+
+/* Create */
+
+.create {
+  background-color: #eddfed;
+  padding: 10%;
+}
+
+.formCard{
+  max-width: 38rem;
+  margin: 3rem auto;
+  background-color: #000731;
+  color: white;
+  border: none;
+  padding: 30px;
+}
+
+.ccTitle{
+  margin-bottom: 1.8rem;
+}
+
+.flabel{
+  font-size: 1.4rem;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 5px 1rem;
+}
+
+.cInput{
+  height: 1.75rem;
+  width: 13rem;
+  padding: 5px;
+  background-color: #ff1932;
+  border: none;
+  color: black;
+  font-weight: 500;
+  margin: 0 1rem 1.5rem 1rem;
+}
+
+.textarea{
+  height: 7.75rem;
+  width: 13rem;
+  padding: 5px;
+  background-color: #ff1932;
+  border: none;
+  color: black;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.textarea::placeholder, .cInput::placeholder{
+  background-color: #ff1932;
+  border: none;
+  color: rgb(60, 0, 0);
+  font-weight: 500;
+
+}
+
+.textarea:focus, .cInput:focus{
+  outline: none;
+}
+
+
+.cKaft{
+  margin-top: 1.4rem;
+
+}
+
+.cKopen{
+  width: 31rem;
+}
