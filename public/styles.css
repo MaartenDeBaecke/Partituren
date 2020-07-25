@@ -488,6 +488,7 @@ body{
 
 .ccTitle{
   margin-bottom: 1.8rem;
+  margin-left: 1rem;
 }
 
 .flabel{
@@ -496,34 +497,33 @@ body{
   margin: 5px 1rem;
 }
 
+
+.cInput, .textarea{
+  font-weight: 500;
+  border-color: #ff1932;
+  background-color: #000731;
+  color: white;
+  margin: 0 1rem 1.5rem 1rem;
+  width: 13rem;
+  border-width: 2px;
+}
+
 .cInput{
   height: 1.75rem;
-  width: 13rem;
-  padding: 5px;
-  background-color: #ff1932;
-  border: none;
-  color: black;
-  font-weight: 500;
-  margin: 0 1rem 1.5rem 1rem;
+  border-style: none none solid none;
 }
 
 .textarea{
   height: 7.75rem;
-  width: 13rem;
-  padding: 5px;
-  background-color: #ff1932;
-  border: none;
-  color: black;
-  font-weight: 500;
-  margin-left: 1rem;
+  border-style: none solid solid none;
+  max-height: 11rem;
 }
 
-.textarea::placeholder, .cInput::placeholder{
-  background-color: #ff1932;
-  border: none;
-  color: rgb(60, 0, 0);
-  font-weight: 500;
 
+.cInput::placeholder, .textarea::placeholder{
+  border: none;
+  color: rgb(250, 150, 150);
+  font-weight: 500;
 }
 
 .textarea:focus, .cInput:focus{
@@ -532,8 +532,7 @@ body{
 
 
 .cKaft{
-  margin-top: 1.4rem;
-
+  margin-top: -1px;
 }
 
 .cKopen{
