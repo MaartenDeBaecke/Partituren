@@ -190,6 +190,7 @@ body{
 
 #cardImg{
   height: 379.917px;
+  width: 268.15px;
   position: absolute;
   top: 30px;
   left: 75px;
@@ -474,12 +475,54 @@ body{
 
 .create {
   background-color: white;
-  padding: 5rem;
+  padding: 5rem 5rem 5rem 5%;
 }
+
+.ccolOne{
+  margin-top: 3rem;
+}
+
+@media(max-width: 1300px){
+  .create {
+    padding: 5rem 2% 5rem 2%;
+  }
+}
+
+@media(max-width: 1200px){
+  .ccolOne{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.ccolOne #description{
+  left: 240px;
+}
+
+.ccolOne #card{
+  width: 517.5px;
+  margin-left: -45px;
+}
+
+.ccolOne #cardImg {
+  box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
+  left: -40.4px;
+}
+
+.ccolOne #cardHeader{
+  width: 103%;
+}
+
+.ccolOne #playbtn{
+  right: 35px;
+}
+
 
 .formCard{
   max-width: 38rem;
-  margin: auto;
+  margin-left: 0;
+  margin-right: -10rem;
   background-color: #000731;
   color: white;
   border: none;
@@ -533,6 +576,7 @@ body{
   font-weight: 500;
 }
 
+
 .textarea:focus, .cInput:focus{
   outline: none;
 }
@@ -555,6 +599,16 @@ body{
   width: 100%;
   font-size: 1.25rem;
   font-family: 'Ubuntu', sans-serif;
+}
+
+@media(max-width: 1200px){
+  .create {
+    padding: 3rem;
+  }
+
+  .formCard{
+    margin: auto;
+  }
 }
 
 @media (max-width: 767px){
