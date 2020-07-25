@@ -486,6 +486,9 @@ body{
   padding: 30px;
 }
 
+
+
+
 .ccTitle{
   margin-bottom: 1.8rem;
   margin-left: 1rem;
@@ -519,6 +522,10 @@ body{
   max-height: 11rem;
 }
 
+.cscol{
+  height: 10rem;
+}
+
 
 .cInput::placeholder, .textarea::placeholder{
   border: none;
@@ -530,11 +537,60 @@ body{
   outline: none;
 }
 
-
 .cKaft{
   margin-top: -1px;
 }
 
-.cKopen{
-  width: 31rem;
+.cKopen {
+  width: 200%;
+}
+
+.saveBtn{
+  margin: auto 2rem auto 2rem;
+  outline: none;
+  border: solid 2px;
+  border-color: #ff1932;
+  background-color: #ff1932;
+  color: white;
+  width: 100%;
+  font-size: 1.25rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width: 767px){
+  .create {
+    background-color: white;
+    padding: 2rem;
+  }
+
+  .formCard{
+    max-width: 37rem;
+    margin: auto;
+    background-color: #000731;
+    color: white;
+    border: none;
+    padding: 30px;
+    height: 55rem;
+  }
+
+  .cKopen {
+    width: inherit;
+  }
+
+  .cInput, .textarea{
+    margin: 0 1rem 1.5rem 1rem;
+    width: 90%;
+  }
+
+  .textarea{
+    height: 7.75rem;
+    border-style: none solid solid none;
+    max-height: 11rem;
+  }
+
+  .saveBtn{
+    margin-top: 9rem;
+    width: 85%;
+  }
+
 }
