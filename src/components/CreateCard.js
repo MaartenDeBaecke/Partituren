@@ -35,7 +35,7 @@ function CreateCard(props){
   return(
     <div className="create">
 
-    <Row>
+    <Row className="cRow">
       <Col className="ccolTwo" xl={7}>
         <div className="formCard">
         <h1 className="ccTitle">Nieuw</h1>
@@ -68,7 +68,7 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card title={card.title} link={card.img}/>
+        <Card listen={card.listen} title={card.title} link={card.img} subTitle={card.subTitle} description={card.description}/>
       </Col>
       </Row>
     </div>

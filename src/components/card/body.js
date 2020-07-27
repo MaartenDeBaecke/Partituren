@@ -1,12 +1,11 @@
 import React from "react";
 
-function Body(){
+function Body(props){
   return(
     <div>
-      <p className="cardSub">For Flute Solo</p>
+      <p className="cardSub">{props.sub}</p>
       <div className="extras">
-        <p>Telt 5 pagina’s,</p>
-        <p>Gepubliceerd in 2003</p>
+        <p>{props.des}</p>
       </div>
     </div>
   );

@@ -237,7 +237,7 @@ body{
 .extras{
   margin-top: 38.025px;
   color: #b2b2b2;
-  line-height: 0.3;
+  line-height: 1;
 }
 
 .desbtn{
@@ -486,12 +486,10 @@ body{
   .create {
     padding: 5rem 2% 5rem 2%;
   }
-}
 
-@media(max-width: 1200px){
   .ccolOne{
-    display: flex;
-    justify-content: center;
+    max-width: 26rem;
+    margin: auto;
   }
 }
 

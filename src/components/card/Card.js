@@ -14,8 +14,8 @@ function Card(props){
         <Img url={props.link}/>
         <div id="description">
           <Header head={props.title} />
-          <Body />
-          <Footer />
+          <Body sub={props.subTitle} des={props.description} />
+          <Footer lis={props.listen} />
         </div>
       </Jumbotron>
     </Container>
