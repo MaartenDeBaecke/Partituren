@@ -330,13 +330,41 @@ body{
 #playbtn:active{
   transition: all 50ms;
   top: 319.1815px;
-  right: 36.5px !important;
+  right: 36.5px;
   height: 41.184px;
   width: 41.184px;
 }
 
 #playbtn:focus{
   outline: none;
+}
+
+.disabledPlay{
+  border: 1px solid	#484848 !important;
+}
+
+.disabledPlay:active{
+  height: 44.343px !important;
+  top: 316.602px !important;
+  right: 35.0px !important;
+  width: 44.343px !important;
+}
+
+.disabledPlay:hover {
+  animation: none !important;
+}
+
+
+.disPlayLink{
+  color:	#484848 !important;
+}
+
+.disPlayLink:touch{
+  color: #484848 !important;
+}
+
+.disPlayLink:hover{
+  color: #484848 !important;
 }
 
 @keyframes pulse {

@@ -10,9 +10,11 @@ function CreateCard(props){
     subTitle: "SubTitel",
     img: "https://static.wixstatic.com/media/299c16_9dd9a16c108542d48849edc401169d3c~mv2.png/v1/fill/w_339,h_465,al_c,q_85,usm_0.66_1.00_0.01/img_not_found.webp",
     description: "Telt x paginas...",
-    listen: "",
-    buy: ""
+    listen: "none",
+    buy: "",
+    style: ""
   });
+
 
   function handleChange(event){
     const {name, value} = event.target;
@@ -23,6 +25,21 @@ function CreateCard(props){
         [name]: value
       }
     });
+    if (name === "listen" && value !== "none" && value !== ""){
+      setCard(prevCard => {
+        return {
+          ...prevCard,
+          style: "true"
+        }
+      });
+    } else {
+      setCard(prevCard => {
+        return {
+          ...prevCard,
+          style: ""
+        }
+      });
+    }
   }
 
   function submit(event){
@@ -68,7 +85,7 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card listen={card.listen} title={card.title} link={card.img} subTitle={card.subTitle} description={card.description}/>
+        <Card style={card.style} listen={card.listen} title={card.title} link={card.img} subTitle={card.subTitle} description={card.description}/>
       </Col>
       </Row>
     </div>
