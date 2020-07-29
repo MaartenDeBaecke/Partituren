@@ -6,7 +6,7 @@ function Overzicht(){
     <div className="btn">
         <span className="noSelect">
           <Link activeClass="active" to="overzicht" spy={true}
-            smooth={true} offset={0} duration={500}><span class="clickOv">Overzicht</span></Link>
+            smooth={true} offset={0} duration={500}><span className="clickOv">Overzicht</span></Link>
         </span><div id="circle">
     </div></div>
   );

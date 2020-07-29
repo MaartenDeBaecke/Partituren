@@ -2,25 +2,25 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Card = new Schema({
-    card_title: {
+    title: {
         type: String
     },
-    card_subTitle: {
+    subTitle: {
         type: String
     },
-    card_listen: {
+    listen: {
         type: String
     },
-    card_buy: {
+    buy: {
         type: String
     },
-    card_description: {
+    description: {
         type: String
     },
-    card_img: {
+    img: {
         type: String
     },
-    card_style: {
+    style: {
         type: String
     }
 });

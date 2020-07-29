@@ -53,13 +53,13 @@ cardRoutes.route('/edit/:id').post(function(req, res) {
         if (!card){
             res.status(404).send("data is not found");
         } else {
-            card.card_title = req.body.card_title;
-            card.card_subTitle = req.body.card_subTitle;
-            card.card_listen = req.body.card_listen;
-            card.card_buy = req.body.card_buy;
-            card.card_description = req.body.card_description;
-            card.card_img = req.body.card_img;
-            card.card_style = req.body.card_style;
+            card.title = req.body.title;
+            card.subTitle = req.body.subTitle;
+            card.listen = req.body.listen;
+            card.buy = req.body.buy;
+            card.description = req.body.description;
+            card.img = req.body.img;
+            card.style = req.body.style;
 
             card.save().then(card => {
                 res.json('Card updated!');
