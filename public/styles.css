@@ -618,13 +618,28 @@ body{
 .saveBtn{
   margin: auto 2rem auto 2rem;
   outline: none;
-  border: solid 2px;
-  border-color: #ff1932;
+  border: none;
   background-color: #ff1932;
   color: white;
   width: 100%;
   font-size: 1.25rem;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.saveBtn:hover{
+  -webkit-box-shadow: inset 0px 0px 109px -74px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 109px -74px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 109px -74px rgba(0,0,0,0.75);
+}
+
+.saveBtn:active{
+  -webkit-box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
+}
+
+.saveBtn:focus{
+  outline: none;
 }
 
 @media(max-width: 1200px){

@@ -88,7 +88,7 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card style={card.style} listen={card.listen} title={card.title} link={card.img} subTitle={card.subTitle} description={card.description}/>
+        <Card style={card.style} listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description}/>
       </Col>
 
 
