@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import axios from 'axios';
-import React, { useState } from "react";
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from './card/Card';
@@ -21,9 +21,6 @@ function CreateCard(props){
 
   function handleChange(event){
     const {name, value} = event.target;
-
-
-
     setCard(prevCard => {
       return {
         ...prevCard,
@@ -49,8 +46,6 @@ function CreateCard(props){
   }
 
   function submit(event){
-    console.log(card);
-    console.log(cards);
     axios.post('http://localhost:4000/cards/create', card)
         .then(res => console.log(res.data));
     event.preventDefault();
@@ -60,7 +55,6 @@ function CreateCard(props){
 
   return(
     <div className="create">
-    {addCards()}
     <Row className="cRow">
       <Col className="ccolTwo" xl={7}>
         <div className="formCard">

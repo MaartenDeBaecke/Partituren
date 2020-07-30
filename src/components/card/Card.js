@@ -11,7 +11,7 @@ function Card(props){
   return(
     <Container className="cardContainer">
       <Jumbotron id="card">
-        <Img url={props.link}/>
+        <Img url={props.img}/>
         <div id="description">
           <Header head={props.title} />
           <Body sub={props.subTitle} des={props.description} />

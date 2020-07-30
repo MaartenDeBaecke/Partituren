@@ -14,11 +14,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect('mongodb://127.0.0.1:27017/cards', { useNewUrlParser: true, useUnifiedTopology: true });
-const connection = mongoose.connection;
 
-connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
-})
 
 cardRoutes.route('/').get(function(req, res) {
     Card.find(function(err, cards) {
@@ -26,6 +22,7 @@ cardRoutes.route('/').get(function(req, res) {
           console.log(err);
         } else {
           res.json(cards);
+
         }
     });
 });
