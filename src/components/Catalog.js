@@ -35,20 +35,16 @@ function Catalog(){
 
 
              {cardArr.map(card => (
-               <Col className="col"><Card
+               <Col className="col" key={card._id}><Card
+                 key={card._id}
                  title={card.title}
                  img={card.img}
                  description={card.description}
                  listen={card.listen}
+                 style={card.style}
+                 buy={card.buy}
                /></Col>
              ))}
-
-            <Col className="col"><Card title="Morning Blue" listen="https://www.youtube.com/watch?v=9a0KyR_l2tw" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/16/morning_blue.jpg"/></Col>
-            <Col className="col"><Card title="4 Mysterious Pieces" listen="" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/26/four_mysterious_pieces.jpg"/></Col>
-            <Col className="col"><Card title="Luister en Speel" listen="" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/15/luister_en_speel_begeleiding.jpg"/></Col>
-
-            <Col className="col"><Card title="6 Dynamic Pieces" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/27/fingers_crossed.jpg"/></Col>
-            <Col className="col"><Card title="Luister en Speel" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/22/6_Dynamic_pieces.jpg"/></Col>
 
           </Row>
         </Container>
