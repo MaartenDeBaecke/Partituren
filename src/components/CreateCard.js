@@ -14,9 +14,8 @@ function CreateCard(props){
     subTitle: "SubTitel",
     img: "https://static.wixstatic.com/media/299c16_9dd9a16c108542d48849edc401169d3c~mv2.png/v1/fill/w_339,h_465,al_c,q_85,usm_0.66_1.00_0.01/img_not_found.webp",
     description: "Telt x paginas...",
-    listen: "none",
+    listen: "",
     buy: "",
-    style: ""
   });
 
   function handleChange(event){
@@ -28,21 +27,6 @@ function CreateCard(props){
       }
     });
 
-    if (name === "listen" && value !== "none" && value !== ""){
-      setCard(prevCard => {
-        return {
-          ...prevCard,
-          style: "true"
-        }
-      });
-    } else {
-      setCard(prevCard => {
-        return {
-          ...prevCard,
-          style: ""
-        }
-      });
-    }
   }
 
   function submit(event){
@@ -58,7 +42,7 @@ function CreateCard(props){
     <Row className="cRow">
       <Col className="ccolTwo" xl={7}>
         <div className="formCard">
-        <h1 className="ccTitle">Nieuw</h1>
+          <h1 className="ccTitle">Nieuw</h1>
           <form className="createFrom" >
 
             <Row>
@@ -88,7 +72,7 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card style={card.style} listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description}/>
+        <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description}/>
       </Col>
 
 

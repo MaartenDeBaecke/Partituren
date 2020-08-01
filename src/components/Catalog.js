@@ -32,8 +32,6 @@ function Catalog(){
         <span className="catalogHeader">Nieuw</span>
         <Container className="catalogContainer">
           <Row className="row">
-
-
              {cardArr.map(card => (
                <Col className="col" key={card._id}><Card
                  key={card._id}
@@ -41,7 +39,6 @@ function Catalog(){
                  img={card.img}
                  description={card.description}
                  listen={card.listen}
-                 style={card.style}
                  buy={card.buy}
                  id={card._id}
                /></Col>
@@ -55,7 +52,6 @@ function Catalog(){
             <Col className="col"><Card title="Peter Pan" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/24/2_pieces_for_double_bass.jpg"/></Col>
             <Col className="col"><Card title="afscheid" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/13/Peter_Pan.jpg"/></Col>
             <Col className="col"><Card title="Fingers crossed" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/3/Afscheid.jpg"/></Col>
-
             <Col className="col"><Card title="6 Dynamic Pieces" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/27/fingers_crossed.jpg"/></Col>
 
           </Row>

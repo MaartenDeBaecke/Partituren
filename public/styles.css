@@ -542,6 +542,13 @@ body{
   margin-top: 3rem;
 }
 
+.ccolOne .edit{
+  left: -30px;
+}
+
+
+
+
 @media(max-width: 1300px){
   .create {
     padding: 5rem 2% 5rem 2%;
@@ -550,6 +557,10 @@ body{
   .ccolOne{
     max-width: 26rem;
     margin: auto;
+  }
+
+  .edit{
+    left: -30px;
   }
 }
 
@@ -575,6 +586,8 @@ body{
 .ccolOne #playbtn{
   right: 35px;
 }
+
+
 
 
 .formCard{
@@ -720,4 +733,8 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     width: 85%;
   }
 
+}
+
+.do{
+  background-color: red;
 }

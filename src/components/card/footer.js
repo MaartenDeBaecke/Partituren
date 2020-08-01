@@ -4,7 +4,7 @@ function Footer(props){
   let swapId;
   let swapClass;
 
-  if (props.style === ""){
+  if (props.lis === ""){
     swapId = "disabledPlay";
     swapClass = "disPlayLink playLink";
   } else {

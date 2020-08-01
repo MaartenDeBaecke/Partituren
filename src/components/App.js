@@ -11,7 +11,6 @@ function App() {
       <Route path="/" exact component={Home} />
       <Route path="/edit/:id" component={EditCard} />
       <Route path="/create" component={CreateCard} />
-
     </Router>
   );
 }

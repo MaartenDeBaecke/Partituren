@@ -4,7 +4,7 @@ function Edit(props){
   return(
     <div>
       <div className="edit">
-        <a href="/" className="editBtn"><i class="far fa-edit fa-2x"></i></a>
+        <a href={"/edit/" + props.id} className="editBtn"><i className="far fa-edit fa-2x"></i></a>
       </div>
       <p>{props.id}</p>
     </div>
