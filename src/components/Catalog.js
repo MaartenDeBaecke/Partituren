@@ -43,6 +43,7 @@ function Catalog(){
                  listen={card.listen}
                  style={card.style}
                  buy={card.buy}
+                 id={card._id}
                /></Col>
              ))}
 
