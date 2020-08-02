@@ -195,7 +195,7 @@ body{
   transform: scaleX(-1);
 }
 
-#card:hover .fa-edit:hover{
+#card:hover .fa-edit:hover, .fa-trash:hover{
   color: #3b2e5a !important;
 }
 
@@ -250,12 +250,17 @@ body{
   transition: all 300ms;
 }
 
-.fa-edit{
+.delete {
+  top: 90px !important;
+  left: 18px;
+}
+
+.fa-edit, .fa-trash{
   color: #000731 !important;
   transform: scaleX(-1);
 }
 
-.fa-edit:hover{
+.fa-edit:hover, .fa-trash:hovers{
   color: #3b2e5a !important;
 }
 
@@ -547,8 +552,6 @@ body{
 }
 
 
-
-
 @media(max-width: 1300px){
   .create {
     padding: 5rem 2% 5rem 2%;
@@ -561,6 +564,10 @@ body{
 
   .edit{
     left: -30px;
+  }
+
+  .delete{
+    left: -23px !important;
   }
 }
 

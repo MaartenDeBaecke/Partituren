@@ -33,6 +33,8 @@ function CreateCard(props){
     axios.post('http://localhost:4000/cards/create', card)
         .then(res => console.log(res.data));
     event.preventDefault();
+    props.history.push('/');
+    window.location.reload(false);
   }
 
 

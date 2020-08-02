@@ -6,7 +6,6 @@ function Edit(props){
       <div className="edit">
         <a href={"/edit/" + props.id} className="editBtn"><i className="far fa-edit fa-2x"></i></a>
       </div>
-      <p>{props.id}</p>
     </div>
   );
 }

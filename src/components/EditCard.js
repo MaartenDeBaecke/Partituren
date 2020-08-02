@@ -45,7 +45,8 @@ function EditCard(props){
     event.preventDefault();
     axios.post('http://localhost:4000/cards/edit/'+ props.match.params.id, card)
       .then(res => console.log(res.data));
-    props.history.push('/');
+      props.history.push('/');
+      window.location.reload(false);
 
   }
 
