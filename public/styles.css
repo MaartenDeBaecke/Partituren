@@ -180,7 +180,7 @@ body{
 }
 
 #card:hover #playbtn{
-  right: 35px;
+  right: 15px !important;
 }
 
 #card:hover .edit{
@@ -354,7 +354,7 @@ body{
   position: absolute;
   height: 44.343px;
   top: 316.602px;
-  right: 23.53px;
+  right: 3.53px !important;
   width: 44.343px;
   text-align: center;
   z-index: 1;
@@ -368,7 +368,7 @@ body{
 #playbtn:active{
   transition: all 50ms;
   top: 319.1815px;
-  right: 36.5px;
+  right: 16.5px !important;
   height: 41.184px;
   width: 41.184px;
 }
@@ -404,6 +404,7 @@ body{
 .disPlayLink:hover{
   color: #484848 !important;
 }
+
 
 @keyframes pulse {
 	0% {
@@ -532,7 +533,7 @@ body{
   }
 
   #playbtn{
-    right: 35px;
+    right: 5px !important;
   }
 }
 
@@ -590,7 +591,7 @@ body{
   width: 103%;
 }
 
-.ccolOne #playbtn{
+.ccolOne #n{
   right: 35px;
 }
 
