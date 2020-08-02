@@ -68,6 +68,16 @@ cardRoutes.route('/edit/:id').post(function(req, res) {
     });
 });
 
+cardRoutes.route("/delete/:id").post(function(req, res) {
+  Card.deleteOne({_id: req.params.id}, function(err){
+    if (err){
+      console.log(err);
+    } else {
+      console.log("Deleted");
+    }
+  });
+})
+
 
 app.use('/cards', cardRoutes);
 
