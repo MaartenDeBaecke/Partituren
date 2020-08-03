@@ -82,7 +82,7 @@ function EditCard(props){
                   <input autoComplete="off" onChange={handleChange} name="img" className="cInput" type="text" value={card.img} />
 
                   <p className="flabel">Collectie</p>
-                  <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" placeholder="Nieuw" />
+                  <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" value={card.section} />
                 </Col>
                 <button className="saveBtn" onClick={submit}>Aanpassen</button>
               </Row>

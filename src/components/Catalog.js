@@ -30,6 +30,9 @@ function Catalog(){
     !sections.includes(card.section) ? sections.push(card.section) : sections.push();
   });
 
+  sections.sort();
+
+
   console.log(sections);
 
   return(
@@ -38,7 +41,7 @@ function Catalog(){
 
         {sections.map(collection => (
           <div>
-            <span className="catalogHeader">{collection}</span>
+            <span className="catalogHeader">{collection.substring(1)}</span>
             <Container className="catalogContainer">
               <Row className="row">
                  {cardArr.map(card => (

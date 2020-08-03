@@ -16,7 +16,7 @@ function CreateCard(props){
     description: "Telt x paginas...",
     listen: "",
     buy: "",
-    section: "Nieuw"
+    section: "1Nieuw"
   });
 
   function handleChange(event){
@@ -69,8 +69,8 @@ function CreateCard(props){
                 <p className="flabel cKaft">Kaft</p>
                 <input autoComplete="off" onChange={handleChange} name="img" className="cInput" type="text" placeholder="https://www.euprint.be/ochtentblauw.jpg" />
 
-                <p className="flabel">Collectie</p>
-                <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" placeholder="Nieuw" />
+                <p className="flabel">Index + Collectie</p>
+                <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" placeholder="1Nieuw" />
               </Col>
               <button className="saveBtn" onClick={submit}>Toevoegen</button>
             </Row>
