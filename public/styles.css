@@ -368,7 +368,7 @@ body{
 #playbtn:active{
   transition: all 50ms;
   top: 319.1815px;
-  right: 16.5px !important;
+  right: 16.5px ;
   height: 41.184px;
   width: 41.184px;
 }
@@ -532,7 +532,7 @@ body{
     width: 103%;
   }
 
-  #playbtn{
+  #playbtn, #card:hover #playbtn{
     right: 5px !important;
   }
 }
@@ -664,10 +664,6 @@ body{
   margin-top: -1px;
 }
 
-.cKopen {
-  width: 200%;
-}
-
 .saveBtn{
   margin: auto 2rem auto 2rem;
   outline: none;
@@ -721,10 +717,6 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     height: 55rem;
   }
 
-  .cKopen {
-    width: inherit;
-  }
-
   .cInput, .textarea{
     margin: 0 1rem 1.5rem 1rem;
     width: 90%;
@@ -741,8 +733,4 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     width: 85%;
   }
 
-}
-
-.do{
-  background-color: red;
 }

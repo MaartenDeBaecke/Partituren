@@ -20,7 +20,7 @@ let Card = new Schema({
     img: {
         type: String
     },
-    style: {
+    section: {
         type: String
     }
 });

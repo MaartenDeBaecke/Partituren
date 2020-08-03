@@ -16,6 +16,7 @@ function CreateCard(props){
     description: "Telt x paginas...",
     listen: "",
     buy: "",
+    section: "Nieuw"
   });
 
   function handleChange(event){
@@ -59,7 +60,7 @@ function CreateCard(props){
                 <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" placeholder="https://www.youtube.com/ochtendblauw" />
 
                 <p className="flabel">Kopen</p>
-                <input autoComplete="off" onChange={handleChange} name="buy" className="cInput cKopen" type="text" placeholder="https://www.euprint.be/nl/ochtendblauw-morning-blue" />
+                <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" placeholder="https://www.euprint.be/nl/ochtendblauw-morning-blue" />
               </Col>
               <Col md={6} className="cscol">
                 <p className="flabel">Beschrijving</p>
@@ -67,6 +68,9 @@ function CreateCard(props){
 
                 <p className="flabel cKaft">Kaft</p>
                 <input autoComplete="off" onChange={handleChange} name="img" className="cInput" type="text" placeholder="https://www.euprint.be/ochtentblauw.jpg" />
+
+                <p className="flabel">Collectie</p>
+                <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" placeholder="Nieuw" />
               </Col>
               <button className="saveBtn" onClick={submit}>Toevoegen</button>
             </Row>
@@ -74,10 +78,8 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description}/>
+        <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description} buy={card.buy}/>
       </Col>
-
-
 
       </Row>
     </div>

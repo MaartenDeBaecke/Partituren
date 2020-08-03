@@ -14,6 +14,7 @@ function EditCard(props){
     description: "",
     listen: "",
     buy: "",
+    section: "Nieuw"
   });
   const apiUrl = 'http://localhost:4000/cards/' + props.match.params.id;
 
@@ -71,7 +72,7 @@ function EditCard(props){
                   <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" value={card.listen} />
 
                   <p className="flabel">Kopen</p>
-                  <input autoComplete="off" onChange={handleChange} name="buy" className="cInput cKopen" type="text" value={card.buy} />
+                  <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" value={card.buy} />
                 </Col>
                 <Col md={6} className="cscol">
                   <p className="flabel">Beschrijving</p>
@@ -79,6 +80,9 @@ function EditCard(props){
 
                   <p className="flabel cKaft">Kaft</p>
                   <input autoComplete="off" onChange={handleChange} name="img" className="cInput" type="text" value={card.img} />
+
+                  <p className="flabel">Collectie</p>
+                  <input autoComplete="on" onChange={handleChange} name="section" className="cInput" type="text" placeholder="Nieuw" />
                 </Col>
                 <button className="saveBtn" onClick={submit}>Aanpassen</button>
               </Row>

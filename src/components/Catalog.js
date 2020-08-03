@@ -20,49 +20,44 @@ function Catalog(){
   }, []);
 
   const cardArr = [];
+  const sections = [];
 
   cards.forEach(card =>{
     cardArr.push(card);
   })
 
+  cardArr.forEach(card =>{
+    !sections.includes(card.section) ? sections.push(card.section) : sections.push();
+  });
+
+  console.log(sections);
+
   return(
     <div className="bgCatalog">
       <div className="catalog">
 
-        <span className="catalogHeader">Nieuw</span>
-        <Container className="catalogContainer">
-          <Row className="row">
-             {cardArr.map(card => (
-               <Col className="col" key={card._id}><Card
-                 key={card._id}
-                 title={card.title}
-                 img={card.img}
-                 description={card.description}
-                 listen={card.listen}
-                 buy={card.buy}
-                 id={card._id}
-               /></Col>
-             ))}
+        {sections.map(collection => (
+          <div>
+            <span className="catalogHeader">{collection}</span>
+            <Container className="catalogContainer">
+              <Row className="row">
+                 {cardArr.map(card => (
+                   card.section === collection ?
+                   <Col className="col" key={card._id}><Card
+                     key={card._id}
+                     title={card.title}
+                     img={card.img}
+                     description={card.description}
+                     listen={card.listen}
+                     buy={card.buy}
+                     id={card._id}
+                   /></Col> : null
+                 ))}
+              </Row>
+            </Container>
+          </div>
+        ))}
 
-          </Row>
-        </Container>
-        <span className="catalogHeader">Dwarsfluit</span>
-        <Container className="catalogContainer">
-          <Row className="row">
-            <Col className="col"><Card title="Peter Pan" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/24/2_pieces_for_double_bass.jpg"/></Col>
-            <Col className="col"><Card title="afscheid" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/13/Peter_Pan.jpg"/></Col>
-            <Col className="col"><Card title="Fingers crossed" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/3/Afscheid.jpg"/></Col>
-            <Col className="col"><Card title="6 Dynamic Pieces" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/27/fingers_crossed.jpg"/></Col>
-
-          </Row>
-        </Container>
-        <span className="catalogHeader">Contrabas</span>
-        <Container className="catalogContainer">
-          <Row className="row">
-            <Col className="col"><Card title="Peter Pan" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/24/2_pieces_for_double_bass.jpg"/></Col>
-            <Col className="col"><Card title="Luister en Speel" link="https://sdb-steven-de-baecke.s3.eu-west-2.amazonaws.com/uploads/my_music/image/22/6_Dynamic_pieces.jpg"/></Col>
-          </Row>
-        </Container>
       </div>
     </div>
   );
