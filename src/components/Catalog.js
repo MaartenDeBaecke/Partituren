@@ -50,6 +50,7 @@ function Catalog(){
                      key={card._id}
                      title={card.title}
                      img={card.img}
+                     subTitle={card.subTitle}
                      description={card.description}
                      listen={card.listen}
                      buy={card.buy}

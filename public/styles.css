@@ -26,7 +26,7 @@ body{
 }
 
 .nameSubTitle{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', sans-serif;
   font-size: 2.2rem;
   margin-top: -1rem;
   font-style: italic;
@@ -175,10 +175,6 @@ body{
   left: -40.4px;
 }
 
-#card:hover #cardHeader{
-  width: 103%;
-}
-
 #card:hover #playbtn{
   right: 15px !important;
 }
@@ -227,19 +223,20 @@ body{
 }
 
 #cardHeader{
-  font-family: 'Arizonia', cursive;
+  font-family: 'Arizonia', sans-serif;
   color: white;
-  font-size: 2.34rem;
+
   background-color: #000731;
   z-index: 5;
   position: relative;
   padding-left: 5.85px;
   padding-bottom: 2.34px;
-  width: 105%;
+
   padding-right: 9.45px;
   padding-left: 11.7px;
   text-align: left;
   right: 14.02px;
+  margin: 5px 0;
 }
 
 .edit{
@@ -529,7 +526,7 @@ body{
   }
 
   #cardHeader{
-    width: 103%;
+
   }
 
   #playbtn, #card:hover #playbtn{
@@ -588,7 +585,7 @@ body{
 }
 
 .ccolOne #cardHeader{
-  width: 103%;
+
 }
 
 .ccolOne #n{
