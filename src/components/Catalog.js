@@ -20,6 +20,16 @@ function Catalog(){
     fetchData();
   }, []);
 
+  const cardArr = [];
+  const sections = [];
+
+  cards.forEach(card =>{
+    cardArr.push(card);
+  })
+  cardArr.forEach(card =>{
+    !sections.includes(card.section) ? sections.push(card.section) : sections.push();
+  });
+
   const fuse = new Fuse(cards, {
     keys: [
       'title',
@@ -27,42 +37,28 @@ function Catalog(){
       'description'
     ]
   });
-  const cardArr = [];
-  const sections = [];
 
-  const [searchT, setST] = useState("");
-  const [searchRes, setSearchR] = useState([]);
+  const [query, setQuery] = useState("");
 
-  cards.forEach(card =>{
-    cardArr.push(card);
-  })
-
-  cardArr.forEach(card =>{
-    !sections.includes(card.section) ? sections.push(card.section) : sections.push();
-  });
-
-
-
-  function handleChange(e){
-    setST(e.target.value);
-    const results = fuse.search(searchT);
-    setSearchR(results.map(card => card.item));
-
+  function onSearch({ currentTarget }) {
+    setQuery(currentTarget.value);
   }
 
+  const results = fuse.search(query)
+  const searchedCards = query ? results.map(card => card.item) : cards;
 
   sections.sort();
 
   return(
     <div className="bgCatalog">
-      <input onChange={handleChange} value={searchT}/>
+      <input type="text" value={query} onChange={onSearch}/>
       <div className="catalog">
         {sections.map(collection => (
           <div key={collection}>
             <span className="catalogHeader">{collection.substring(1)}</span>
             <Container className="catalogContainer">
               <Row className="row">
-               {searchRes.map(card => (
+               {searchedCards.map(card => (
                  card.section === collection ?
                  <Col className="col" key={card._id}>
                    <Card
