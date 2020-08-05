@@ -5,6 +5,7 @@ import Card from "./card/Card";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Fuse from 'fuse.js';
 
 function Catalog(){
   const [cards, setCards] = useState([]);
@@ -19,8 +20,18 @@ function Catalog(){
     fetchData();
   }, []);
 
+  const fuse = new Fuse(cards, {
+    keys: [
+      'title',
+      'subTitle',
+      'description'
+    ]
+  });
   const cardArr = [];
   const sections = [];
+
+  const [searchT, setST] = useState("");
+  const [searchRes, setSearchR] = useState([]);
 
   cards.forEach(card =>{
     cardArr.push(card);
@@ -30,23 +41,31 @@ function Catalog(){
     !sections.includes(card.section) ? sections.push(card.section) : sections.push();
   });
 
+
+
+  function handleChange(e){
+    setST(e.target.value);
+    const results = fuse.search(searchT);
+    setSearchR(results.map(card => card.item));
+
+  }
+
+
   sections.sort();
-
-
-  console.log(sections);
 
   return(
     <div className="bgCatalog">
+      <input onChange={handleChange} value={searchT}/>
       <div className="catalog">
-
         {sections.map(collection => (
-          <div>
+          <div key={collection}>
             <span className="catalogHeader">{collection.substring(1)}</span>
             <Container className="catalogContainer">
               <Row className="row">
-                 {cardArr.map(card => (
-                   card.section === collection ?
-                   <Col className="col" key={card._id}><Card
+               {searchRes.map(card => (
+                 card.section === collection ?
+                 <Col className="col" key={card._id}>
+                   <Card
                      key={card._id}
                      title={card.title}
                      img={card.img}
@@ -55,8 +74,9 @@ function Catalog(){
                      listen={card.listen}
                      buy={card.buy}
                      id={card._id}
-                   /></Col> : null
-                 ))}
+                   />
+                 </Col> : null
+               ))}
               </Row>
             </Container>
           </div>

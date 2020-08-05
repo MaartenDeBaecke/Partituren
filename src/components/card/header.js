@@ -6,7 +6,7 @@ function Header(props){
 
   return (
     <div ref={ref} style={{ fontSize, height: 72, width: 240 }}>
-      <div id="cardHeader">{props.head}</div>
+      <div className="name" id="cardHeader">{props.head}</div>
     </div>
   );
 }

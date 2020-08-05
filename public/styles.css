@@ -79,6 +79,11 @@ body{
   font-family: 'Ubuntu Mono', monospace;
 }
 
+
+.searchLi{
+  list-style: none;
+}
+
 /* Zoeken */
 
 

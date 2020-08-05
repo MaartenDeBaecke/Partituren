@@ -23,6 +23,7 @@ function Card(props){
         </div>
       </Jumbotron>
     </Container>
+
   );
 }
 
