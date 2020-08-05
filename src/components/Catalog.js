@@ -21,14 +21,13 @@ function Catalog(){
   }, []);
 
   const cardArr = [];
-  const sections = [];
+  let sections = [];
 
   cards.forEach(card =>{
     cardArr.push(card);
   })
-  cardArr.forEach(card =>{
-    !sections.includes(card.section) ? sections.push(card.section) : sections.push();
-  });
+
+
 
   const fuse = new Fuse(cards, {
     keys: [
@@ -46,6 +45,10 @@ function Catalog(){
 
   const results = fuse.search(query)
   const searchedCards = query ? results.map(card => card.item) : cards;
+
+  cardArr.forEach(card =>{
+    !sections.includes(card.section) && searchedCards.includes(card) ? sections.push(card.section) : sections.push();
+  });
 
   sections.sort();
 
