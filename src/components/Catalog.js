@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Card from "./card/Card";
-import {input} from "./search";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -37,10 +36,10 @@ function Catalog(props){
   });
 
 
-  const [query, setQuery] = useState(input);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    setQuery(input);
+    setQuery("");
   },[]);
 
 

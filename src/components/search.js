@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 
-let input = "";
 
-function Search() {
-  const [value, setValue] = useState(input);
+const Search = ({ searching }) => {
+  const [value, setValue] = useState("test");
 
-  function onSearch(e) {
+  function submit(e){
     setValue(e.target.value);
-    input = value;
+    searching(value);
   }
 
-  return(
+  return (
     <form className="searchForm">
-      <input className="search" type="text" name="search" autoComplete="off" placeholder="zoeken" value={value} onChange={onSearch}/> </form>
+      <input
+        className="search"
+        type="text" name="search"
+        autoComplete="off"
+        placeholder="zoeken"
+        value={value}
+        onChange={submit}
+      />
+    </form>
   );
-}
+};
 
-
-
-
-export { Search, input };
+export { Search };
