@@ -37,6 +37,7 @@ function Catalog(props){
 
 
   const [query, setQuery] = useState(props.search);
+  console.log(props.search);
 
   useEffect(() => {
     setQuery(props.search);
