@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 const Search = ({ searching }) => {
-  const [value, setValue] = useState("test");
+  const [value, setValue] = useState("");
 
   function submit(e){
     setValue(e.target.value);

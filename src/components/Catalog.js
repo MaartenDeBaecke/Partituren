@@ -36,11 +36,11 @@ function Catalog(props){
   });
 
 
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(props.search);
 
   useEffect(() => {
-    setQuery("");
-  },[]);
+    setQuery(props.search);
+  },[props.search]);
 
 
 

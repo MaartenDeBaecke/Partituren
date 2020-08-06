@@ -1,11 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Search} from './search';
 import Header from './Header';
 import Overzicht from './Overzicht';
 
-function Banner() {
+
+const Banner = ({ search }) => {
   const [value, setValue] = useState("");
-  console.log(value);
+
+  useEffect(() => {
+    search(value);
+  },[search, value]);
 
   return(
     <div className="banner">
@@ -14,7 +18,7 @@ function Banner() {
       <Overzicht />
     </div>
   );
-}
+};
 
 
 export default Banner;
