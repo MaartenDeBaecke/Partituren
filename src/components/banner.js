@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './search';
+import {Search} from './search';
 import Header from './Header';
 import Overzicht from './Overzicht';
 
@@ -11,7 +11,7 @@ function Banner() {
       <Overzicht />
     </div>
   );
-} 
+}
 
 
 export default Banner;

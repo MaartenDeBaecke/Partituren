@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from './banner';
-import Catalog from './Catalog';
-
+import {Catalog} from './Catalog';
 
 function Home(){
   return(

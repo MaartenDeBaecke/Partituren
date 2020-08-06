@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Card from "./card/Card";
+import {input} from "./search";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Fuse from 'fuse.js';
 
-function Catalog(){
+function Catalog(props){
   const [cards, setCards] = useState([]);
-  const apiUrl = 'http://localhost:4000/cards/';
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(apiUrl);
+      const result = await axios('http://localhost:4000/cards/');
       setCards(result.data);
     };
 
     fetchData();
   }, []);
+
 
   const cardArr = [];
   let sections = [];
@@ -26,8 +27,6 @@ function Catalog(){
   cards.forEach(card =>{
     cardArr.push(card);
   })
-
-
 
   const fuse = new Fuse(cards, {
     keys: [
@@ -37,11 +36,15 @@ function Catalog(){
     ]
   });
 
-  const [query, setQuery] = useState("");
 
-  function onSearch({ currentTarget }) {
-    setQuery(currentTarget.value);
-  }
+  const [query, setQuery] = useState(input);
+
+  useEffect(() => {
+    setQuery(input);
+  },[]);
+
+
+
 
   const results = fuse.search(query)
   const searchedCards = query ? results.map(card => card.item) : cards;
@@ -51,10 +54,8 @@ function Catalog(){
   });
 
   sections.sort();
-
   return(
     <div className="bgCatalog">
-      <input type="text" value={query} onChange={onSearch}/>
       <div className="catalog">
         {sections.map(collection => (
           <div key={collection}>
@@ -86,4 +87,6 @@ function Catalog(){
   );
 }
 
-export default Catalog;
+
+
+export {Catalog};
