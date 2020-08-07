@@ -88,6 +88,7 @@ body{
   color: #eee !important;
   font-size: 20px;
   font-family: 'Merriweather', serif;
+  height: 37px;
 
   position: static;
   transition: 1.15s;
@@ -102,15 +103,15 @@ body{
 }
 
 #circle {
-  width: 5px;
-  height: 5px;
+  width: 1px;
+  height: 1px;
   background: transparent;
   border-radius: 50%;
   position: static;
   margin-top: -5px;
   margin-left: 3.5rem;
   overflow: hidden;
-  transition: 500ms;
+  transition: 600ms;
 }
 
 .noselect {
@@ -531,6 +532,62 @@ body{
   }
 }
 
+.noResults{
+  width: 100%;
+  height: 7rem;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.noResText{
+  font-size: 4rem;
+  font-family: 'Merriweather', serif;
+}
+
+
+.btnRe {
+  width: 195px;
+  color: #eee !important;
+  font-size: 25px !important;
+  height: 50px !important;
+}
+
+.btnRe:hover {
+  color: #212529 !important;
+  transition: all 500ms;
+}
+
+
+.btnRe:hover .circleRe {
+  height: 53px !important;
+  width: 189px !important;
+  margin-top: -3rem !important;
+  margin-left: -0.2rem !important;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+  border-color: #212529 !important;
+  color: #212529 !important;
+}
+
+.circleRe {
+  width: 1px !important;
+  height: 1px !important;
+  margin-left: 5.3rem !important;
+}
+
+.clickRe:hover{
+  color: #212529 !important;
+}
+
+.nobtn{
+  background-color: rgba(0,0,0,0) !important;
+  border: none !important;
+  color: white;
+}
+
+.nobtn:focus{
+  outline: none !important;
+}
 /* Create */
 
 .create {

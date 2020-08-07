@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Fuse from 'fuse.js';
+import Scroll, {scroller} from 'react-scroll';
+var scroll = Scroll.animateScroll;
 
 function Catalog(props){
   const [cards, setCards] = useState([]);
@@ -44,6 +46,18 @@ function Catalog(props){
     setQuery(props.search);
   },[props.search]);
 
+  function loadAll(){
+    scroller.scrollTo("overzicht", {
+      duration: 500,
+      delay: 0,
+      smooth: true,
+      offset: 0
+    });
+    scroll.scrollTo(775);
+
+    setQuery("");
+  }
+
   const results = fuse.search(query)
   const searchedCards = query ? results.map(card => card.item) : cards;
   console.log(results);
@@ -81,6 +95,19 @@ function Catalog(props){
             </Container>
           </div>
         ))}
+
+        {sections.length === 0 ?
+          <div class="noResults">
+            <p class="noResText">Geen Resultaten</p>
+            <br />
+            <br />
+            <div className="btn btnRe">
+                <span className="noSelect">
+                  <button onClick={loadAll} class="nobtn"><span className="clickOv clickRe">Catalogus</span></button>
+                </span><div id="circle" className="circleRe">
+            </div></div>
+          </div> : null
+        }
 
       </div>
     </div>
