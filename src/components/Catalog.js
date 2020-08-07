@@ -31,30 +31,28 @@ function Catalog(props){
     keys: [
       'title',
       'subTitle',
-      'description'
-    ]
+      'description',
+      'section'
+    ],
+    includeScore: true
   });
 
 
   const [query, setQuery] = useState(props.search);
-  console.log(props.search);
 
   useEffect(() => {
     setQuery(props.search);
-    console.log(props.search);
   },[props.search]);
-
-
-
 
   const results = fuse.search(query)
   const searchedCards = query ? results.map(card => card.item) : cards;
-
+  console.log(results);
   cardArr.forEach(card =>{
     !sections.includes(card.section) && searchedCards.includes(card) ? sections.push(card.section) : sections.push();
   });
 
   sections.sort();
+
   return(
     <div className="bgCatalog">
       <div className="catalog">
@@ -75,6 +73,7 @@ function Catalog(props){
                      listen={card.listen}
                      buy={card.buy}
                      id={card._id}
+                     section={collection}
                    />
                  </Col> : null
                ))}

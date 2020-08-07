@@ -46,39 +46,30 @@ body{
   border-color: #000731;
   background-color: rgba(0,0,0,0);
   outline: none;
-  width: 15rem;
+  width: 18rem;
   text-align: center;
   color: #eee;
   font-size: 1.5rem;
   font-family: 'Ubuntu Mono', monospace;
+  transition: all 300ms;
 }
 
 .search::placeholder{
   color: #b2b2b2;
 }
 
-@keyframes expand {
-  0% {
-    width: 15rem;
-  }
-  15%{
-    with: 10%%;
-  }
-  90%{
-    width: 44%;
-  }
-  100% {
-    width: 45%;
-  }
-}
 
 .search:focus{
   animation: expand 0.2s 1;
-  width: 45%;
+  width: 55%;
   background-color: rgba(0,0,0,0);
   font-family: 'Ubuntu Mono', monospace;
 }
-
+@media(max-width: 1000px){
+  .search:focus{
+    width: 65%;
+  }
+}
 
 .searchLi{
   list-style: none;
@@ -455,6 +446,7 @@ body{
   overflow: hidden;
   margin: auto !important;
   line-height: 1.3 !important;
+  min-height: 100vh
 }
 
 .catalogContainer{
