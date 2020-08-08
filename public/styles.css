@@ -684,6 +684,15 @@ body{
   border-width: 2px;
 }
 
+input:-webkit-autofill,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000731 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
 .cInput{
   height: 1.75rem;
   border-style: none none solid none;
@@ -693,6 +702,13 @@ body{
   height: 7.75rem;
   border-style: none solid solid none;
   max-height: 11rem;
+}
+
+input.ccheckbox{
+  width: 16px;
+  height: 16px;
+  margin-left: 15px;
+  filter: contrast(90%) hue-rotate(115deg) brightness(1.1);;
 }
 
 .cscol{
@@ -765,7 +781,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     color: white;
     border: none;
     padding: 30px;
-    height: 55rem;
+    height: 60rem;
   }
 
   .cInput, .textarea{
@@ -780,7 +796,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   }
 
   .saveBtn{
-    margin-top: 9rem;
+    margin-top: 15rem;
     width: 85%;
   }
 

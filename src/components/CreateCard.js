@@ -59,7 +59,8 @@ function CreateCard(props){
                 <p className="flabel">Luisteren</p>
                 <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" placeholder="https://www.youtube.com/ochtendblauw" />
 
-                <p className="flabel">Kopen</p>
+                <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" className="ccheckbox" name="free"/></p>
+
                 <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" placeholder="https://www.euprint.be/nl/ochtendblauw-morning-blue" />
               </Col>
               <Col md={6} className="cscol">
