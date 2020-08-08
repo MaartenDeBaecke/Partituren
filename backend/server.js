@@ -58,6 +58,7 @@ cardRoutes.route('/edit/:id').post(function(req, res) {
             card.description = req.body.description;
             card.img = req.body.img;
             card.section = req.body.section;
+            card.free = req.body.free;
 
             card.save().then(card => {
                 res.json('Card updated!');

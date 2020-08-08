@@ -88,6 +88,7 @@ function Catalog(props){
                      buy={card.buy}
                      id={card._id}
                      section={collection}
+                     free={card.free}
                    />
                  </Col> : null
                ))}
@@ -97,13 +98,13 @@ function Catalog(props){
         ))}
 
         {sections.length === 0 ?
-          <div class="noResults">
-            <p class="noResText">Geen Resultaten</p>
+          <div className="noResults">
+            <p className="noResText">Geen Resultaten</p>
             <br />
             <br />
             <div className="btn btnRe">
                 <span className="noSelect">
-                  <button onClick={loadAll} class="nobtn"><span className="clickOv clickRe">Catalogus</span></button>
+                  <button onClick={loadAll} className="nobtn"><span className="clickOv clickRe">Catalogus</span></button>
                 </span><div id="circle" className="circleRe">
             </div></div>
           </div> : null

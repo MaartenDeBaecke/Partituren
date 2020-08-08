@@ -19,7 +19,7 @@ function Card(props){
         <div id="description">
           <Header head={props.title} />
           <Body sub={props.subTitle} des={props.description} />
-          <Footer lis={props.listen} buy={props.buy} />
+          <Footer lis={props.listen} buy={props.buy} free={props.free}/>
         </div>
       </Jumbotron>
     </Container>

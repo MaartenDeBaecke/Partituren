@@ -14,8 +14,12 @@ function EditCard(props){
     description: "",
     listen: "",
     buy: "",
-    section: "Nieuw"
+    section: "Nieuw",
+    free: "false"
   });
+
+  const [check, setCheck] = useState("true");
+
   const apiUrl = 'http://localhost:4000/cards/' + props.match.params.id;
 
   useEffect(() => {
@@ -40,6 +44,18 @@ function EditCard(props){
     });
 
     console.log(card);
+  }
+
+  function toggle(e){
+    const value = e.target.value
+    value === "true" ? setCheck("false") : setCheck("true");
+
+    setCard(prevCard => {
+      return {
+        ...prevCard,
+        free: check
+      }
+    });
   }
 
   function submit(event){
@@ -71,7 +87,7 @@ function EditCard(props){
                   <p className="flabel">Luisteren</p>
                   <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" value={card.listen} />
 
-                  <p className="flabel">Kopen</p>
+                  <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle} className="ccheckbox" name="free" value={check}/></p>
                   <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" value={card.buy} />
                 </Col>
                 <Col md={6} className="cscol">
@@ -90,7 +106,7 @@ function EditCard(props){
           </div>
         </Col>
         <Col className="ccolOne" xl={5} >
-          <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description}/>
+          <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description} free={card.free}/>
         </Col>
       </Row>
     </div>

@@ -16,8 +16,11 @@ function CreateCard(props){
     description: "Telt x paginas...",
     listen: "",
     buy: "",
-    section: "1Nieuw"
+    section: "1Nieuw",
+    free: "false"
   });
+
+  const [check, setCheck] = useState("true");
 
   function handleChange(event){
     const {name, value} = event.target;
@@ -27,7 +30,6 @@ function CreateCard(props){
         [name]: value
       }
     });
-
   }
 
   function submit(event){
@@ -38,7 +40,17 @@ function CreateCard(props){
     window.location.reload(false);
   }
 
+  function toggle(e){
+    const value = e.target.value
+    value === "true" ? setCheck("false") : setCheck("true");
 
+    setCard(prevCard => {
+      return {
+        ...prevCard,
+        free: check
+      }
+    });
+  }
 
   return(
     <div className="create">
@@ -59,7 +71,7 @@ function CreateCard(props){
                 <p className="flabel">Luisteren</p>
                 <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" placeholder="https://www.youtube.com/ochtendblauw" />
 
-                <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" className="ccheckbox" name="free"/></p>
+                <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle} className="ccheckbox" name="free" value={check}/></p>
 
                 <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" placeholder="https://www.euprint.be/nl/ochtendblauw-morning-blue" />
               </Col>
@@ -79,7 +91,7 @@ function CreateCard(props){
         </div>
       </Col>
       <Col className="ccolOne" xl={5} >
-        <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description} buy={card.buy}/>
+        <Card listen={card.listen} title={card.title} img={card.img} subTitle={card.subTitle} description={card.description} buy={card.buy} free={card.free}/>
       </Col>
 
       </Row>

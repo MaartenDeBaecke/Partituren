@@ -22,6 +22,9 @@ let Card = new Schema({
     },
     section: {
         type: String
+    },
+    free: {
+      type: String
     }
 });
 

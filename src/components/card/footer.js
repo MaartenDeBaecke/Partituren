@@ -12,9 +12,13 @@ function Footer(props){
     swapClass = "playLink"
   }
 
+  let text = "Koop nu"
+
+  props.free === "true" ? text = "  Gratis " : text = "Koop nu";
+
   return(
     <div className="desbtn">
-      <a target="_blank" rel="noopener noreferrer" href={props.buy}><span className="shine"><button className="buybtn" ><i className="fas fa-file-import icon"></i>Koop nu</button></span></a>
+      <a target="_blank" rel="noopener noreferrer" href={props.buy}><span className="shine"><button className="buybtn" ><i className="fas fa-file-import icon"></i>{text}</button></span></a>
 
       <a target="_blank" rel="noopener noreferrer" href={props.lis}>
         <button id="playbtn" className={swapId}>&nbsp;
