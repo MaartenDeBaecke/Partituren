@@ -15,12 +15,10 @@ function EditCard(props){
     listen: "",
     buy: "",
     section: "Nieuw",
-    free: "false"
+    free: ""
   });
 
   const apiUrl = 'http://localhost:4000/cards/' + props.match.params.id;
-
-  const [check, setCheck] = useState("false");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +28,8 @@ function EditCard(props){
 
     fetchData();
   }, [apiUrl]);
+
+
 
 
   function handleChange(event){
@@ -42,6 +42,9 @@ function EditCard(props){
     });
 
   }
+
+
+  const [check, setCheck] = useState("false");
 
   function toggle(e){
     const value = e.target.value
@@ -61,8 +64,24 @@ function EditCard(props){
       .then(res => console.log(res.data));
       props.history.push('/');
       window.location.reload(false);
-
   }
+
+
+
+  var counter = 0;
+  const [isChecked, setIsChecked] = useState();
+
+  var i = setInterval(function(){
+      var checker = (card.free === "false");
+      setIsChecked(checker);
+
+
+      counter++;
+      if(counter === 2) {
+          clearInterval(i);
+      }
+  }, 20);
+
 
   return(
     <div className="create">
@@ -83,7 +102,7 @@ function EditCard(props){
                   <p className="flabel">Luisteren</p>
                   <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" value={card.listen} />
 
-                  <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle}  className="ccheckbox" name="free" value={check}/></p>
+                  <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle} defaultChecked={isChecked} className="ccheckbox" name="free" value={check}/></p>
                   <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" value={card.buy} />
                 </Col>
                 <Col md={6} className="cscol">
