@@ -18,21 +18,23 @@ function EditCard(props){
     free: "false"
   });
 
-  const [check, setCheck] = useState("true");
-
   const apiUrl = 'http://localhost:4000/cards/' + props.match.params.id;
+
+  const [checkbool, setCheckbool] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(apiUrl);
       setCard(result.data);
     };
+    card.free === "true" ? setCheckbool(true) : setCheckbool(false);
 
     fetchData();
-  }, []);
+  }, [apiUrl, card.free]);
+
+  const [check, setCheck] = useState("true");
 
 
-  console.log(card);
 
   function handleChange(event){
     const {name, value} = event.target;
@@ -43,13 +45,12 @@ function EditCard(props){
       }
     });
 
-    console.log(card);
   }
 
   function toggle(e){
     const value = e.target.value
     value === "true" ? setCheck("false") : setCheck("true");
-
+    value === "true" ? setCheckbool(false) : setCheckbool(true);
     setCard(prevCard => {
       return {
         ...prevCard,
@@ -87,7 +88,7 @@ function EditCard(props){
                   <p className="flabel">Luisteren</p>
                   <input autoComplete="off" onChange={handleChange} name="listen" className="cInput" type="text" value={card.listen} />
 
-                  <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle} className="ccheckbox" name="free" value={check}/></p>
+                  <p className="flabel">Kopen, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratis ?<input type="checkbox" onChange={toggle} className="ccheckbox" checked={checkbool} name="free" value={check}/></p>
                   <input autoComplete="off" onChange={handleChange} name="buy" className="cInput" type="text" value={card.buy} />
                 </Col>
                 <Col md={6} className="cscol">
