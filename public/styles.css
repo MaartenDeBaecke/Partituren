@@ -77,6 +77,35 @@ body{
 
 /* Zoeken */
 
+/* Highlight */
+
+.highlight{
+  position: absolute;
+  top: 1rem;
+  right: 0%;
+
+  width: 518.5px;
+  height: 380px;
+
+  margin:2em;
+
+  display:flex;
+  perspective:200px;
+}
+
+.far-right {
+  perspective-origin: 100% 50%;
+}
+
+.hcolOne #description{
+  text-align: left;
+}
+
+.hcolOne {
+  transform: rotateY(-4.5deg);
+}
+
+
 
 /* overzicht button */
 
@@ -645,6 +674,7 @@ body{
 .ccolOne #n{
   right: 35px;
 }
+
 
 
 

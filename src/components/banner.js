@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Search} from './search';
 import Header from './Header';
 import Overzicht from './Overzicht';
-
+import Highlight from './Highlight';
 
 const Banner = ({ search }) => {
   const [value, setValue] = useState("");
@@ -16,6 +16,7 @@ const Banner = ({ search }) => {
       <Header />
       <Search searching={value => setValue(value)} />
       <Overzicht />
+      <Highlight />
     </div>
   );
 };

@@ -26,7 +26,7 @@ function Catalog(props){
   let sections = [];
 
   cards.forEach(card =>{
-    cardArr.push(card);
+    card.section !== "0" ? cardArr.push(card) : cardArr.push();
   })
 
   const fuse = new Fuse(cards, {

@@ -14,7 +14,7 @@ function Footer(props){
 
   let text = "Koop nu"
 
-  props.free === "false" ? text = " Gratis " : text = "Koop nu";
+  props.free === "true" ? text = " Gratis " : text = "Koop nu";
 
   return(
     <div className="desbtn">
