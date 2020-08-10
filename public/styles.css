@@ -138,7 +138,7 @@ body{
 }
 
 .hcolOne #card{
-  box-shadow: 8px -10px 25px 0px rgba(240,240,240,0.51);
+  box-shadow: 1px -1px 14px 0px rgba(240,240,240,0.51);
 }
 
 
@@ -151,9 +151,14 @@ body{
 }
 
 .hcolOne:hover {
-transform:  rotateY(-1deg);
-
+  transform:  rotateY(-1deg);
 }
+
+.hcolOne:hover #card{
+  box-shadow: 4px -4px 14px 0px rgba(240,240,240,0.51);
+}
+
+
 
 
 
