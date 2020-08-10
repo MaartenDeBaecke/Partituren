@@ -79,30 +79,80 @@ body{
 
 /* Highlight */
 
-.highlight{
-  position: absolute;
-  top: 1rem;
-  right: 0%;
+.subBanCont{
+  width: 100%;
+  padding: 2rem;
+  background-color: #000731;
+  height: 100vh;
+  min-height: 40rem;
+  max-height: 50rem;
+}
 
+.highDes{
+  color: white;
+}
+
+.subBanTitle{
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  margin-left: 7rem;
+  font-size: 2.7rem;
+}
+
+.subBanDes{
+  width: 26rem;
+  margin-left: 7rem;
+  font-size: 1.3rem;
+}
+
+.subBanBtn{
+  margin-left: 7rem;
+  position: absolute;
+  top: 5rem;
+}
+
+
+
+.highlight{
+  font-family: 'Merriweather', serif;
   width: 518.5px;
   height: 380px;
 
   margin:2em;
 
   display:flex;
-  perspective:200px;
+  perspective: 180px;
+}
+
+.hcolOne #playbtn{
+  right: 15px !important;
 }
 
 .far-right {
   perspective-origin: 100% 50%;
+
 }
 
 .hcolOne #description{
   text-align: left;
 }
 
+.hcolOne #card{
+  box-shadow: 8px -10px 25px 0px rgba(240,240,240,0.51);
+}
+
+
 .hcolOne {
-  transform: rotateY(-4.5deg);
+  transform: rotateY(-5deg) rotateX(0.3deg);
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 0.7s;
+
+}
+
+.hcolOne:hover {
+transform:  rotateY(-1deg);
+
 }
 
 

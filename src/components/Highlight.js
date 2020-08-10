@@ -5,6 +5,8 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+let buyLink;
+
 function Highlight(){
   const [cards, setCards] = useState([]);
   let frontCard = [];
@@ -26,7 +28,7 @@ function Highlight(){
   cardArr.forEach(card => {
     if (card.section === "0"){
       frontCard = card;
-
+      buyLink = card.buy;
     }
   })
 
@@ -44,4 +46,4 @@ function Highlight(){
   );
 }
 
-export default Highlight;
+export {Highlight, buyLink};
