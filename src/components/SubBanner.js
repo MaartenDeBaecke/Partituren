@@ -15,7 +15,7 @@ function SubBanner(){
   return(
     <div className="subBanCont">
       <Row>
-      <Col className="highDes" sm={6}>
+      <Col className="highDes" xl={6}>
         <h2 className="subBanTitle">Verkrijg een gratis kopie</h2>
         <p className="subBanDes">
           Lorem ipsum dolor sit amet,
@@ -38,7 +38,7 @@ function SubBanner(){
           </a>
         </div>
       </Col>
-      <Col sm={6}>
+      <Col xl={6}>
         <Highlight />
       </Col>
       </Row>

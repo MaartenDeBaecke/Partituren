@@ -1,6 +1,8 @@
 body{
   margin: 0;
   font-family: 'Merriweather', serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -79,13 +81,15 @@ body{
 
 /* Highlight */
 
+
 .subBanCont{
-  width: 100%;
-  padding: 2rem;
+  max-width: 1600px;;
+  padding: 1rem;
   background-color: #000731;
   height: 100vh;
   min-height: 40rem;
   max-height: 50rem;
+  margin: 0 auto;
 }
 
 .highDes{
@@ -94,21 +98,77 @@ body{
 
 .subBanTitle{
   margin-top: 8rem;
-  margin-bottom: 1rem;
-  margin-left: 7rem;
+  margin-bottom: 2rem;
+  margin-left: 10rem;
   font-size: 2.7rem;
 }
 
 .subBanDes{
   width: 26rem;
-  margin-left: 7rem;
+  margin-left: 10rem;
   font-size: 1.3rem;
 }
 
 .subBanBtn{
-  margin-left: 7rem;
+  margin-left: 87%;
   position: absolute;
-  top: 5rem;
+  top: 8rem;
+  transform: scale(1.4,1.4);
+}
+
+@media(max-width: 1380px){
+  .highlight{
+    margin: 0rem 0 0 0  !important;
+  }
+}
+
+@media(max-width: 1300px){
+  .subBanTitle{
+    margin-left: 14%;
+  }
+
+  .subBanDes{
+    margin-left: 14%;
+  }
+
+  .highlight{
+    margin: 3rem 0 0 -15%  !important;
+  }
+
+  .subBanBtn{
+    margin-left: 84%;
+  }
+}
+
+
+
+@media(max-width: 1200px){
+  .subBanDes{
+    width: 65%;
+  }
+
+  .subBanTitle{
+    width: 70%;
+  }
+
+  .highlight{
+    margin: 2rem 0 0 15%  !important;
+  }
+
+  .subBanBtn{
+    margin-left: 35%;
+    margin-top: 18rem;
+  }
+
+  .subBanCont{
+    height: 63rem !important;
+    max-height: 63rem !important;
+    min-height: 40rem;
+    max-height: 50rem;
+    margin: 0 auto;
+  }
+
+
 }
 
 
@@ -117,9 +177,8 @@ body{
   font-family: 'Merriweather', serif;
   width: 518.5px;
   height: 380px;
-
-  margin:2em;
-
+  margin: 2em;
+  margin-top: 0;
   display:flex;
   perspective: 180px;
 }
