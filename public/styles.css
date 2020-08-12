@@ -83,102 +83,49 @@ body{
 
 
 .subBanCont{
-  max-width: 1600px;;
-  padding: 1rem;
+  max-width: 1600px;
+  padding: 0rem 5%;
   background-color: #000731;
-  height: 100vh;
-  min-height: 40rem;
-  max-height: 50rem;
   margin: 0 auto;
+  height auto;
+  min-height: 100vh;
 }
 
 .highDes{
   color: white;
+  padding: 3% !important;
+  max-width: 50% !important;
+  padding-top: 12rem !important;
+  margin-bottom: 15rem;
 }
+
 
 .subBanTitle{
-  margin-top: 8rem;
-  margin-bottom: 2rem;
-  margin-left: 10rem;
   font-size: 2.7rem;
+  margin-bottom: 2rem;
 }
 
+
 .subBanDes{
-  width: 26rem;
-  margin-left: 10rem;
+  line-height: 1.7;
   font-size: 1.3rem;
 }
 
 .subBanBtn{
-  margin-left: 87%;
-  position: absolute;
-  top: 8rem;
+  margin: 0 0 0 45.4% !important;
+  position: relative !important;
+  top: -35rem;
   transform: scale(1.4,1.4);
+  width: 8.6% !important;
+  display: inline-block !important;
 }
-
-@media(max-width: 1380px){
-  .highlight{
-    margin: 0rem 0 0 0  !important;
-  }
-}
-
-@media(max-width: 1300px){
-  .subBanTitle{
-    margin-left: 14%;
-  }
-
-  .subBanDes{
-    margin-left: 14%;
-  }
-
-  .highlight{
-    margin: 3rem 0 0 -15%  !important;
-  }
-
-  .subBanBtn{
-    margin-left: 84%;
-  }
-}
-
-
-
-@media(max-width: 1200px){
-  .subBanDes{
-    width: 65%;
-  }
-
-  .subBanTitle{
-    width: 70%;
-  }
-
-  .highlight{
-    margin: 2rem 0 0 15%  !important;
-  }
-
-  .subBanBtn{
-    margin-left: 35%;
-    margin-top: 18rem;
-  }
-
-  .subBanCont{
-    height: 63rem !important;
-    max-height: 63rem !important;
-    min-height: 40rem;
-    max-height: 50rem;
-    margin: 0 auto;
-  }
-
-
-}
-
 
 
 .highlight{
   font-family: 'Merriweather', serif;
   width: 518.5px;
   height: 380px;
-  margin: 2em;
-  margin-top: 0;
+  margin: 2rem 0 0 7rem;
   display:flex;
   perspective: 180px;
 }
@@ -217,8 +164,88 @@ body{
   box-shadow: 4px -4px 14px 0px rgba(240,240,240,0.51);
 }
 
+@media(max-width: 1305px){
+  .highlight{
+    margin: 7rem 0 0 -5rem;
+  }
+}
 
+@media(max-width: 1170px){
+  .highlight{
+    transform: scale(0.8);
+    margin: 5rem 0 0 -17%;
+  }
 
+  .highDes{
+    padding: 0 !important;
+    padding-top: 11rem !important;
+    margin-bottom: 20rem;
+  }
+
+  .subBanTitle{
+    font-size: 2.5rem;
+  }
+
+  .subBanDes{
+    font-size: 1.1rem;
+  }
+
+  .subBanCont{
+    min-height: auto;
+  }
+}
+
+@media(max-width: 1000px){
+
+  .highlight{
+    transform: scale(1);
+    margin: -25rem 0 0 auto;
+  }
+
+  .highDes{
+    padding: 5rem !important;
+    max-width: 100% !important;
+  }
+
+  .subBanTitle{
+    font-size: 2.5rem;
+  }
+
+  .subBanDes{
+    font-size: 1.1rem;
+  }
+
+  .subBanCont{
+    min-height: auto;
+  }
+
+  .subBanBtn{
+    margin: 0 0 0 10.4% !important;
+    top: -39rem;
+    transform: scale(1.2,1.2);
+    width: 8% !important;
+  }
+}
+
+@media(max-width: 900px){
+  .highDes{
+    margin-bottom: 29rem;
+  }
+
+  .highlight{
+    transform: scale(1);
+    margin: -34rem 0 0 12%;
+  }
+
+  .subBanBtn{
+    margin: 0 0 0 40.4% !important;
+    position: relative !important;
+    top: -33rem;
+    transform: scale(1.4,1.4);
+    width: 8.6% !important;
+    display: inline-block !important;
+  }
+}
 
 
 /* overzicht button */
@@ -619,6 +646,15 @@ body{
 @media(min-width: 1600px){
   .catalogContainer{
     max-width: 1600px !important;
+  }
+
+  .subBanCont{
+    max-width: 1600px;
+    padding: 1rem;
+    background-color: #000731;
+
+    min-height: 40rem;
+    max-height: 50rem;
   }
 }
 
