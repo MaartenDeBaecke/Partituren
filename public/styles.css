@@ -86,7 +86,7 @@ body{
   max-width: 1600px;
   padding: 0rem 5%;
   background-color: #000731;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   height auto;
   min-height: 100vh;
 }
@@ -168,6 +168,10 @@ body{
   .highlight{
     margin: 7rem 0 0 -5rem;
   }
+
+  .subBanCont{
+    min-height: auto;
+  }
 }
 
 @media(max-width: 1170px){
@@ -199,12 +203,14 @@ body{
 
   .highlight{
     transform: scale(1);
-    margin: -25rem 0 0 auto;
+    margin: -19rem 0 -2.5rem auto;
   }
+
 
   .highDes{
     padding: 5rem !important;
     max-width: 100% !important;
+    margin-bottom: 15rem;
   }
 
   .subBanTitle{
