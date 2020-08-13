@@ -39,7 +39,7 @@ function Highlight(){
       <Row className="hRow">
 
         <Col className="ccolOne hcolOne">
-          <Card listen={frontCard.listen} title={frontCard.title} img={frontCard.img} subTitle={frontCard.subTitle} description={frontCard.description} buy={frontCard.buy} free={frontCard.free}/>
+          <Card listen={frontCard.listen} title={frontCard.title} img={frontCard.img} subTitle={frontCard.subTitle} description={frontCard.description} buy={frontCard.buy} free={frontCard.free} id={frontCard._id}/>
         </Col>
       </Row>
     </div>

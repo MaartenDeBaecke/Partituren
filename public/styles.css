@@ -87,32 +87,26 @@ body{
   height:125px;
   width:88px;
   animation-name: fly;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
   animation-timing-function:steps(10);
   animation-iteration-count: infinite;
-  transform: scale(0.4);
+  transform: scale(0.3);
 }
 
 .bird-cont{
   position:absolute;
   left: -40% ;
   animation-name: birdFly;
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
 }
 
 
-.bird2{
-  animation-delay: 9s;
-  animation-name: birdFly2;
-  animation-duration: 8s;
-}
-
 .bird3{
-  animation-delay: 0.7s;
+  animation-delay: 4s;
   animation-name: birdFly3;
-  animation-duration: 10.5s;
+  animation-duration: 15.5s;
 }
 
 
@@ -129,21 +123,6 @@ body{
   80% {transform: translateX(150vw) translateY(0vh);}
   90% {transform: translateX(170vw) translateY(-1vh);}
   100% {transform: translateX(190vw) translateY(-5vh);}
-}
-
-@keyframes birdFly2 {
-
-  0% {transform: translateX(-10vw) translateY(02vh);}
-  10% {transform: translateX(10vw) translateY(0vh);}
-  20% {transform: translateX(30vw) translateY(01vh);}
-  30% {transform: translateX(50vw) translateY(3vh);}
-  40% {transform: translateX(70vw) translateY(6vh);}
-  50% {transform: translateX(90vw) translateY(8vh);}
-  60% {transform: translateX(110vw) translateY(6vh);}
-  70% {transform: translateX(130vw) translateY(3vh);}
-  80% {transform: translateX(150vw) translateY(0vh);}
-  90% {transform: translateX(170vw) translateY(01vh);}
-  100% {transform: translateX(190vw) translateY(03vh);}
 }
 
 @keyframes birdFly3 {

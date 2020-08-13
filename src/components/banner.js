@@ -19,15 +19,10 @@ const Banner = ({ search }) => {
         </div>
       </div>
       <br/>
-      <div class="bird-cont bird2">
-        <div class="bird">
-
-        </div>
-      </div>
       <Header />
       <div class="bird-cont bird3">
         <div class="bird">
-        
+
         </div>
       </div>
       <Search searching={value => setValue(value)} />
