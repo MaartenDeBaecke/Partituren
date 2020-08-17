@@ -36,6 +36,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/cards', { useNewUrlParser: true, use
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
+  username: String,
+  name: String,
   googleId: String,
   secret: String
 });
@@ -65,7 +67,7 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     //console.log(profile.name.givenName);
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+    User.findOrCreate({ googleId: profile.id, username: profile.id, name: profile.name.givenName }, function (err, user) {
       return cb(err, user);
     });
   }
