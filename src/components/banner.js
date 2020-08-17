@@ -13,15 +13,15 @@ const Banner = ({ search }) => {
 
   return(
     <div className="banner">
-      <div class="bird-cont ">
-        <div class="bird">
+      <div className="bird-cont ">
+        <div className="bird">
 
         </div>
       </div>
       <br/>
       <Header />
-      <div class="bird-cont bird3">
-        <div class="bird">
+      <div className="bird-cont bird3">
+        <div className="bird">
 
         </div>
       </div>

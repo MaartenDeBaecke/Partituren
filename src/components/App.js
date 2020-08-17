@@ -5,7 +5,6 @@ import EditCard from "./EditCard";
 import CreateCard from "./CreateCard";
 import Register from "./Register";
 import Login from "./Login";
-import Success from "./Success";
 
 
 function App() {
@@ -16,9 +15,6 @@ function App() {
       <Route path="/create" component={CreateCard} />
       <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
-      <Route path="/success" component={Success} />
-      <Route path="/auth/google" />
-      <Route path="/auth/google/callback" />
     </Router>
   );
 }

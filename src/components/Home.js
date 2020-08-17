@@ -2,12 +2,16 @@ import React,  { useState } from "react";
 import Banner from './banner';
 import {Catalog} from './Catalog';
 import SubBanner from './SubBanner';
+import Nav from "./Nav";
+
 
 function Home(){
   const [input, setInput] = useState("");
 
   return(
     <div>
+      <Nav />
+
       <section id="banner">
         <Banner search={input => setInput(input)}/>
       </section>
