@@ -17,6 +17,8 @@ function App() {
       <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
       <Route path="/success" component={Success} />
+      <Route path="/auth/google" />
+      <Route path="/auth/google/callback" />
     </Router>
   );
 }

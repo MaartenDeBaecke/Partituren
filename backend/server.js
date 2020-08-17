@@ -4,7 +4,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const ejs = require("ejs");
 const cardRoutes = express.Router();
 const session = require("express-session");
 const passport = require("passport");
@@ -92,29 +91,32 @@ app.get("/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
   function(req, res) {
     // Successful authentication, redirect secrets.
-    res.redirect("/secrets");
+    res.redirect("http://localhost:3000");
   }
 );
 
-app.get("/login", function(req, res){
-  res.render("login");
-});
+// app.get("/login", function(req, res){
+//   res.render("login");
+// });
 
-app.get("/register", function(req, res){
-  res.render("register");
-});
+// app.get("/logout", function(req, res){
+//   req.logout();
+//   res.redirect("/");
+// });
 
-app.get("/secrets", function(req, res){
-  User.find({"secret": {$ne:null}}, function(err, foundUsers){;//find all user that have a secret
-    if (err){
-      console.log(err);
-    } else {
-      if (foundUsers){
-        res.render("secrets", {usersWithSecrets: foundUsers});
-      }
-    }
-  })
-});
+
+// app.get("/register", function(req, res){
+//   res.render("register");
+// });
+
+// app.get("/secrets", function(req, res){
+//   if (req.user ){ //check if user is logged in
+//     res.render("secrets");
+//   } else {
+//     console.log("false");
+//     res.render("login");
+//   }
+// });
 
 cardRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
