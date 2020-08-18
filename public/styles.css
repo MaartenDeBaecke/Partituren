@@ -619,6 +619,7 @@ body{
 
 .disabledPlay{
   border: 1px solid	#484848 !important;
+  pointer-events: none;
 }
 
 .disabledPlay:active{
@@ -784,6 +785,10 @@ body{
 
   #playbtn, #card:hover #playbtn{
     right: 5px !important;
+  }
+
+  .hcolOne #card:hover #playbtn{
+    right: 15px !important;
   }
 }
 
@@ -1082,7 +1087,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .navEl{
   color: white !important;
-  margin: 0 15px;
+  margin: 0 8px;
   background-color: rgba(0,0,0,0);
   border: none;
 }
