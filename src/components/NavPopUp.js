@@ -1,15 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
 
-function NavPopUp(props){
-  const [close, setClose] = useState("");
 
+const NavPopUp = ({ popUp }) => {
 
   function closing() {
-    setClose(" closing");
+    popUp(false);
   }
-//!!!!need to pass var over to nav to that reg becomes back clicable
+
+
   return(
-    <div className={"popCont " + props.click + close}>
+    <div className={"popCont"}>
       <span className="close" onClick={closing}><i className="fas fa-times"></i></span>
       <h2 className="popTitle">Registreren</h2>
       <form action="http://localhost:4000/auth/google">
@@ -22,6 +22,6 @@ function NavPopUp(props){
       </form>
     </div>
   );
-}
+};
 
 export default NavPopUp;

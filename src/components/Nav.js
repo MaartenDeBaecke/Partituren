@@ -2,18 +2,16 @@ import React, {useState} from "react";
 import PopUp from "./NavPopUp";
 
 function Nav(){
-  const [clicked, setClicked] = useState("");
+  const [clicked, setClicked] = useState(false);
 
   function clicking(){
-    setClicked(" popVis");
-    setTimeout(function(){
-      setClicked(" ");
-    }, 4000);
+    setClicked(true);
   }
 
   return(
     <div>
-      <PopUp click={clicked}/>
+      {clicked ? <PopUp popUp={value => setClicked(value)} /> : null }
+
       <div className="navCont">
         <button className="navEl" onClick={clicking}>Registreren</button>
         <button className="navEl" >Aanmelden</button>
