@@ -1095,17 +1095,31 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 }
 
 .popCont{
+  width: 25rem;
+  margin: 0 auto;
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.5s; /* Firefox < 16 */
+        -ms-animation: fadein 0.5s; /* Internet Explorer */
+         -o-animation: fadein 0.5s; /* Opera < 12.1 */
+            animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.popCard{
   background-color: white;
-  height: 70%;
-  width: 30%;
+  height: 34rem;
+  width: 26rem;
   padding: 30px;
   text-align: center;
   position:fixed;
   top:15%;
-  right: 35%;
-  left: 35%;
   z-index: 15;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
 }
 
 .popTitle{
