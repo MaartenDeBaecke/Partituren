@@ -9,6 +9,7 @@ const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const SpotifyStrategy = require('passport-spotify').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const PORT = 4000;
 
@@ -71,6 +72,21 @@ passport.use(new GoogleStrategy({
   }
 ));
 
+passport.use(
+  new SpotifyStrategy(
+    {
+      clientID: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+      callbackURL: 'http://localhost:4000/auth/spotify/callback'
+    },
+    function(accessToken, refreshToken, expires_in, profile, done) {
+      User.findOrCreate({ spotifyId: profile.id, username: profile.id }, function(err, user) {
+        return done(err, user);
+      });
+    }
+  )
+);
+
 cardRoutes.route('/').get(function(req, res) {
     Card.find(function(err, cards) {
         if (err) {
@@ -97,16 +113,34 @@ app.get("/auth/google",
   passport.authenticate("google", { scope: ["profile"] })
 );
 
+app.get('/auth/spotify', passport.authenticate('spotify'), function(req, res) {
+  // The request will be redirected to spotify for authentication, so this
+  // function will not be called.
+});
+
 app.get("/auth/google/callback",
-  passport.authenticate("google", { failureRedirect: "/login" }),
+  passport.authenticate("google", { failureRedirect: "http://localhost:3000" }),
   function(req, res) {
     // Successful authentication, redirect secrets.
     res.redirect("http://localhost:3000");
 
     req.user ? signIn = true : signIn = false;
-    req.user.googleId === '110513252610058225592' ? permission = true : permission = false;
+    req.user.username === '110513252610058225592' ? permission = true : permission = false;
   }
 );
+
+app.get(
+  '/auth/spotify/callback',
+  passport.authenticate('spotify', { failureRedirect: 'http://localhost:3000' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('http://localhost:3000');
+
+    req.user ? signIn = true : signIn = false;
+    req.user.username === '110513252610058225592' ? permission = true : permission = false;
+  }
+);
+
 
 
 app.get("/logout", function(req, res){

@@ -10,6 +10,7 @@
     "bootstrap": "^4.5.0",
     "fuse.js": "^6.4.1",
     "jquery": "^3.5.1",
+    "passport-spotify": "^1.1.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",

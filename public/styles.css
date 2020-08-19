@@ -1185,3 +1185,12 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   font-weight: bold;
   font-family: 'Roboto',arial,sans-serif;
 }
+
+.spotify-logo{
+  color: #1ED760;
+  transform: scale(1.4);
+}
+
+.spotify-button{
+  margin-top: 2rem;
+}
