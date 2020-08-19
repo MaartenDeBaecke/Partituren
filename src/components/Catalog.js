@@ -60,7 +60,6 @@ function Catalog(props){
 
   const results = fuse.search(query)
   const searchedCards = query ? results.map(card => card.item) : cards;
-  console.log(results);
   cardArr.forEach(card =>{
     !sections.includes(card.section) && searchedCards.includes(card) ? sections.push(card.section) : sections.push();
   });

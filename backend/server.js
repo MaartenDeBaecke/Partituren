@@ -65,8 +65,7 @@ passport.use(new GoogleStrategy({
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    //console.log(profile.name.givenName);
-    User.findOrCreate({ googleId: profile.id, username: profile.id, name: profile.name.givenName }, function (err, user) {
+    User.findOrCreate({ googleId: profile.id, username: profile.id }, function (err, user) {
       return cb(err, user);
     });
   }
@@ -83,6 +82,13 @@ cardRoutes.route('/').get(function(req, res) {
     });
 });
 
+let signIn = false;
+
+app.get("/logInfo", function(req, res){
+
+  res.send(signIn);
+})
+
 app.get("/auth/google",
   passport.authenticate("google", { scope: ["profile"] })
 );
@@ -92,17 +98,16 @@ app.get("/auth/google/callback",
   function(req, res) {
     // Successful authentication, redirect secrets.
     res.redirect("http://localhost:3000");
+
+    req.user ? signIn = true : signIn = false;
   }
 );
 
-// app.get("/login", function(req, res){
-//   res.render("login");
-// });
 
-// app.get("/logout", function(req, res){
-//   req.logout();
-//   res.redirect("/");
-// });
+app.get("/logout", function(req, res){
+  res.redirect("http://localhost:3000/");
+  signIn = false;
+});
 
 
 // app.get("/register", function(req, res){
