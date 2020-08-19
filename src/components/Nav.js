@@ -20,7 +20,6 @@ function Nav(){
   useEffect(() => {
     axios.get('http://localhost:4000/logInfo').then(resp => {
       setSignIn(resp.data);
-      console.log(resp.data);
     });
 
   }, [signIn]);
@@ -31,7 +30,7 @@ function Nav(){
       {clicked ? <PopUp name={name} popUp={value => setClicked(value)} /> : null }
 
       <div className="navCont">
-        {signIn === true ?
+        {signIn ?
           <form action="http://localhost:4000/logout">
             <button className="navEl" >Afmelden</button>
           </form>

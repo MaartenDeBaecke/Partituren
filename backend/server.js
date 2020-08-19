@@ -83,10 +83,14 @@ cardRoutes.route('/').get(function(req, res) {
 });
 
 let signIn = false;
+let permission = false;
 
 app.get("/logInfo", function(req, res){
-
   res.send(signIn);
+})
+
+app.get("/permission", function(req, res){
+  res.send(permission);
 })
 
 app.get("/auth/google",
@@ -100,6 +104,7 @@ app.get("/auth/google/callback",
     res.redirect("http://localhost:3000");
 
     req.user ? signIn = true : signIn = false;
+    req.user.googleId === '110513252610058225592' ? permission = true : permission = false;
   }
 );
 
@@ -124,24 +129,30 @@ app.get("/logout", function(req, res){
 // });
 
 cardRoutes.route('/:id').get(function(req, res) {
-    let id = req.params.id;
-    Card.findById(id, function(err, card) {
-        res.json(card);
-    });
+    if(permission){
+      let id = req.params.id;
+      Card.findById(id, function(err, card) {
+          res.json(card);
+      });
+    }
 });
 
 cardRoutes.route('/create').post(function(req, res) {
-  let card = new Card(req.body);
-  card.save()
-      .then(card => {
-          res.status(200).json({'card': 'card added successfully'});
-      })
-      .catch(err => {
-          res.status(400).send('adding new card failed');
-      });
+  if (permission){
+    let card = new Card(req.body);
+    card.save()
+        .then(card => {
+            res.status(200).json({'card': 'card added successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('adding new card failed');
+        });
+  }
+
 });
 
 cardRoutes.route('/edit/:id').post(function(req, res) {
+  if(permission){
     Card.findById(req.params.id, function(err, card) {
         if (!card){
             res.status(404).send("data is not found");
@@ -163,16 +174,21 @@ cardRoutes.route('/edit/:id').post(function(req, res) {
             });
         }
     });
+  }
+
 });
 
 cardRoutes.route("/delete/:id").post(function(req, res) {
-  Card.deleteOne({_id: req.params.id}, function(err){
-    if (err){
-      console.log(err);
-    } else {
-      console.log("Deleted");
-    }
-  });
+  if(permission){
+    Card.deleteOne({_id: req.params.id}, function(err){
+      if (err){
+        console.log(err);
+      } else {
+        console.log("Deleted");
+      }
+    });
+  }
+
 })
 
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
+import axios from 'axios';
 
 import Img from './img';
 import Header from './header';
@@ -10,12 +11,27 @@ import Edit from "./edit";
 import Delete from "./delete";
 
 function Card(props){
+  const [permission, setPermission] = useState()
+
+
+  axios.get('http://localhost:4000/permission').then(resp => {
+    setPermission(resp.data);
+
+  });
+
+
   return(
     <Container className="cardContainer">
       <Jumbotron id="card">
         <Img url={props.img} title={props.title}/>
-        <Edit id={props.id} />
-        <Delete id={props.id} />
+        { permission ?
+          <div>
+            <Edit id={props.id} />
+            <Delete id={props.id} />
+          </div>
+        :
+          null
+        }
         <div id="description">
           <Header head={props.title} />
           <Body sub={props.subTitle} des={props.description} />
