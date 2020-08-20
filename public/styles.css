@@ -1156,6 +1156,9 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 .google-button:hover, .google-button:focus{
   box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.2);
   outline: none;
+
+  transform: scale(1.4) skewX(-0.4deg);
+
 }
 
 .google-button:active{
@@ -1193,4 +1196,9 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .spotify-button{
   margin-top: 2rem;
+}
+
+.twitter-logo{
+  color: #1DA1F2;
+  transform: scale(1.4);
 }

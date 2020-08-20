@@ -29,6 +29,14 @@ const NavPopUp = ({ popUp, name }) => {
             <span className="google-button__text">{name.toLowerCase()} met Spotify</span>
           </button>
         </form>
+        <form action="http://localhost:4000/auth/twitter">
+          <button type="submit" className="google-button spotify-button">
+            <span className="google-button__icon">
+              <i class="fab fa-twitter twitter-logo"></i>
+            </span>
+            <span className="google-button__text">{name.toLowerCase()} met Twitter</span>
+          </button>
+        </form>
       </div>
 
 
