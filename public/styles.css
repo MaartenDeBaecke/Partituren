@@ -1116,8 +1116,8 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .popCard{
   background-color: white;
-  height: 34rem;
-  width: 26rem;
+  height: 26rem;
+  width: 24rem;
   padding: 30px;
   text-align: center;
   position:fixed;
