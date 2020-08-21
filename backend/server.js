@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(session({
-  secret: "Our little secret.",
+  secret: "Ouhophohioq8337",
   resave: false,
   saveUninitialized: false
 }));
@@ -174,18 +174,6 @@ app.get("/logout", function(req, res){
 });
 
 
-// app.get("/register", function(req, res){
-//   res.render("register");
-// });
-
-// app.get("/secrets", function(req, res){
-//   if (req.user ){ //check if user is logged in
-//     res.render("secrets");
-//   } else {
-//     console.log("false");
-//     res.render("login");
-//   }
-// });
 
 cardRoutes.route('/:id').get(function(req, res) {
     if(permission){

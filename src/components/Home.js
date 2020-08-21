@@ -1,16 +1,22 @@
-import React,  { useState } from "react";
+import React,  { useState, useEffect } from "react";
 import Banner from './banner';
 import {Catalog} from './Catalog';
 import SubBanner from './SubBanner';
-import Nav from "./Nav";
+import {Nav} from "./Nav";
 
 
 function Home(){
   const [input, setInput] = useState("");
+  const [input2, setInput2] = useState("");
+  let finalInput = input;
+
+  if (input2 !== ""){
+    finalInput = input2;
+  } 
 
   return(
     <div>
-      <Nav />
+      <Nav searching={input => setInput2(input)} />
 
       <section id="banner">
         <Banner search={input => setInput(input)}/>
@@ -19,7 +25,7 @@ function Home(){
         <SubBanner />
       </section>
       <section id="overzicht">
-        <Catalog search={input} />
+        <Catalog search={finalInput} />
       </section>
     </div>
   );

@@ -1069,7 +1069,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 .navCont{
   background-color: rgba(0,7,49,0.87);
   margin: 12px 12px 0 0 ;
-  height: 3.5rem;
+  height: auto;
   font-size: 1.15rem;
   padding: 15px;
   text-align: right;
@@ -1097,6 +1097,42 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 }
 .navEl:hover{
   text-decoration: underline;
+}
+
+
+.searchNav{
+  width: 7rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid #ff1932;
+  color: white;
+  text-align: center;
+  margin: 1rem 2.9rem 0 2.9rem;
+  transition: all 200ms;
+}
+
+.searchNav:focus{
+  outline: none;
+  margin: 1rem 0 0 0;
+  width: 14rem;
+}
+
+.searchNav::placeholder{
+  color: #b2b2b2;
+}
+
+.searchLogged{
+  display: inline-block;
+  margin: -2rem -2rem 0rem -2rem ;
+}
+
+.searchNL{
+  width: 5.2rem;
+}
+
+.searchNL:focus{
+  width: 10rem;
+  margin: 1rem 2.9rem 0 2.9rem;
 }
 
 .popCont{

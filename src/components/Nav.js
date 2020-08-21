@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import PopUp from "./NavPopUp";
+import { scroller } from 'react-scroll';
 
-function Nav(){
+const Nav = ({ searching }) => {
   const [clicked, setClicked] = useState(false);
   const [name, setName] = useState(false);
   const [signIn, setSignIn] = useState()
@@ -24,6 +25,26 @@ function Nav(){
 
   }, [signIn]);
 
+  const [value, setValue] = useState("");
+
+  function submit(e){
+    setValue(e.target.value);
+    searching(value);
+  }
+
+  function handleSubmit(e){
+    e.preventDefault();
+
+    scroller.scrollTo("overzicht", {
+      duration: 500,
+      delay: 0,
+      smooth: true,
+      offset: 0
+    });
+
+
+  }
+
 
   return(
     <div>
@@ -32,12 +53,34 @@ function Nav(){
       <div className="navCont">
         {signIn ?
           <form action="http://localhost:4000/logout">
+          <form onSubmit={handleSubmit} className="navEl searchFN searchLogged">
+            <input
+              className="searchNav searchNL"
+              type="text" name="search"
+              autoComplete="off"
+              placeholder="zoeken"
+              onChange={submit}
+              value={value}
+            />
+          </form>
             <button className="navEl" >Afmelden</button>
+
           </form>
         :
           <div>
             <button className="navEl" onClick={clicking1}>Registreren</button>
             <button className="navEl" onClick={clicking2} >Aanmelden</button>
+
+            <form onSubmit={handleSubmit} className="navEl searchFN">
+              <input
+                className="searchNav"
+                type="text" name="search"
+                autoComplete="off"
+                placeholder="zoeken"
+                onChange={submit}
+                value={value}
+              />
+            </form>
           </div>
         }
       </div>
@@ -45,4 +88,4 @@ function Nav(){
   );
 }
 
-export default Nav;
+export {Nav};
