@@ -17,10 +17,10 @@ function CreateCard(props){
     listen: "",
     buy: "",
     section: "1Nieuw",
-    free: "false"
+    free: "true"
   });
 
-  const [check, setCheck] = useState("true");
+  const [check, setCheck] = useState("false");
 
   function handleChange(event){
     const {name, value} = event.target;
