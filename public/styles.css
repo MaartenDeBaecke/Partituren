@@ -1099,6 +1099,14 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   text-decoration: underline;
 }
 
+.navAF{
+  display: inline-block;
+}
+
+.inline-block{
+  display: inline-block;;
+}
+
 
 .searchNav{
   width: 7rem;

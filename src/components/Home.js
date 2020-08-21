@@ -12,7 +12,8 @@ function Home(){
 
   if (input2 !== ""){
     finalInput = input2;
-  } 
+  }
+
 
   return(
     <div>

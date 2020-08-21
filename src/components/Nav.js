@@ -52,20 +52,21 @@ const Nav = ({ searching }) => {
 
       <div className="navCont">
         {signIn ?
-          <form action="http://localhost:4000/logout">
-          <form onSubmit={handleSubmit} className="navEl searchFN searchLogged">
-            <input
-              className="searchNav searchNL"
-              type="text" name="search"
-              autoComplete="off"
-              placeholder="zoeken"
-              onChange={submit}
-              value={value}
-            />
-          </form>
-            <button className="navEl" >Afmelden</button>
-
-          </form>
+          <div>
+            <form onSubmit={handleSubmit} className="navEl searchFN searchLogged">
+              <input
+                className="searchNav searchNL"
+                type="text" name="search"
+                autoComplete="off"
+                placeholder="zoeken"
+                onChange={submit}
+                value={value}
+              />
+            </form>
+            <form className="inline-block" action="http://localhost:4000/logout">
+              <button className="navEl navAF" >Afmelden</button>
+            </form>
+          </div>
         :
           <div>
             <button className="navEl" onClick={clicking1}>Registreren</button>
