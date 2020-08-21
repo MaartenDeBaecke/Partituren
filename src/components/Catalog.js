@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from "./card/Card";
@@ -66,13 +65,8 @@ function Catalog(props){
   });
 
   sections.sort();
-=======
-import React from "react";
-import Element from "./Card";
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
 
   return(
-<<<<<<< HEAD
     <div className="bgCatalog">
       <div className="catalog">
         {sections.map(collection => (
@@ -116,26 +110,6 @@ import Element from "./Card";
         }
 
       </div>
-=======
-    <div className="catalog">
-      <hr />
-      <h1>Nieuw</h1>
-      <Element />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/> 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
     </div>
   );
 }

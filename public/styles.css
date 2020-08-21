@@ -6,6 +6,7 @@ body{
 }
 
 
+
 .banner{
   text-align: center;
   padding-top: 5rem;
@@ -14,7 +15,7 @@ body{
   background-attachment: fixed;
   background-position: 0 40%;
   background-size: cover;
-  height: 45rem;
+  height: 50rem;
   align-items: center;
   justify-content: center;
 }
@@ -335,7 +336,7 @@ body{
   font-family: 'Merriweather', serif;
   height: 37px;
 
-  position: relative;
+  position: static;
   transition: 1.15s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
@@ -352,9 +353,9 @@ body{
   height: 1px;
   background: transparent;
   border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 50%;
+  position: static;
+  margin-top: -5px;
+  margin-left: 3.5rem;
   overflow: hidden;
   transition: 600ms;
 }
@@ -375,31 +376,43 @@ body{
 .btn:hover #circle {
   height: 37px;
   width: 150px;
-  left: 0;
+  margin-top: -2.1rem;
+  margin-left: -0.8rem;
   border-radius: 0;
   border-bottom: 2px solid #eee;
 }
 
+.clickOv{
+  padding: 10px 37px 10px 37px;
+  margin: -15px;
+  background-color: transparent;
+}
+
 
 /*Card*/
-.catalog{
-  background-color: white;
-}
 
 .cardContainer{
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
 }
 
-.card{
-  margin: 0;
+#card{
+  margin: 30px 60px;
   background-color: #000731 !important ;
   border: none !important;
-  height: 360px;
-  width: 510px;
+  height: 379.91px;
+  width: 291px;
+  transition: all 300ms;
 }
 
-<<<<<<< HEAD
+#card:hover > #description{
+  left: 240px;
+}
+
+#card:hover{
+  width: 517.5px;
+  margin-left: -45px;
+}
+
 #card:hover > #cardImg {
   box-shadow: -1px 5px 10px 2px rgba(0, 0, 0, 0.7);
   left: -40.4px;
@@ -433,19 +446,17 @@ body{
 #cardImg{
   height: 379.917px;
   width: 268.15px;
-=======
-.cardImg{
-  height: 360px;
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
   position: absolute;
-  top: 0;
-  left: 0;
-
+  top: 30px;
+  left: 75px;
+  border-radius: 1.5px 0 0 1.5px;
+  z-index: 2;
+  transition: all 300ms;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 
-.description{
+#description{
   position: absolute;
-<<<<<<< HEAD
   left: 120px;
   top: 27px;
   padding: 15.795px 10.53px;
@@ -491,33 +502,24 @@ body{
 
 .fa-edit:hover, .fa-trash:hovers{
   color: #3b2e5a !important;
-=======
-  left: 265px;
-  top: 0;
-  padding: 15px 10px;
 }
 
-.cardHeader{
-  font-family: 'Arizonia', cursive;
-  color: white;
-  font-size: 2.5rem;
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
-}
 
 .cardSub{
-  margin-top: 30px;
+  margin-top: 13.707px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.17rem;
 }
 
 .extras{
-  margin-top: 36px;
+  margin-top: 38.025px;
   color: #b2b2b2;
   line-height: 1;
 }
 
 .desbtn{
-  font-size: 20px;
+  font-size: 21.06px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -526,10 +528,10 @@ body{
   background-color: rgba(0,0,0,0);
   color: rgb(255, 200, 248);
   position: absolute;
-  height: 42px;
-  top: 300px;
-  width: 130px;
-  text-align: left;
+  height: 44.343px;
+  top: 316.602px;
+  width: 137.241px;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -543,7 +545,7 @@ body{
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(146, 148, 248, 0.3),
+    rgba(176, 148, 248, 0.4),
     transparent
   );
   transition: all 650ms;
@@ -552,18 +554,44 @@ body{
 .buybtn:hover:before {
   left: 100%;
 }
-.icon{
-  margin-right: 10px;
-  margin-left: 3px;
+
+.buybtn:active:before{
+  transition: all 180ms;
+  left: 0;
+
 }
 
-.playbtn{
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 6px #3b2e5a, 0 0 10px #3b2e5a, 0 0 15px #3b2e5a;
+  }
+
+  to {
+    box-shadow: 0 0 3px #fff, 0 0 6px rgba(146, 148, 248, 0.3), 0 0 10px rgba(146, 148, 248, 0.3), 0 0 15px rgba(146, 148, 248, 0.3), 0 0 20px rgba(146, 148, 248, 0.3);
+  }
+}
+.buybtn:active{
+  webkit-animation: glow 0.7s ease-in-out infinite alternate;
+  -moz-animation: glow 0.7s ease-in-out infinite alternate;
+  animation: glow 0.7s ease-in-out infinite alternate;
+}
+
+.buybtn:focus{
+  outline: none;
+}
+
+
+
+.icon{
+  margin-right: 10.53px;
+  margin-left: -3.159px;
+}
+
+#playbtn{
   border: 1px solid rgb(255, 90, 120);
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: rgba(0,0,0,0);
-  color: #ff3232;
   position: absolute;
-<<<<<<< HEAD
   height: 44.343px;
   top: 316.602px;
   right: 3.53px !important;
@@ -583,19 +611,10 @@ body{
   right: 16.5px ;
   height: 41.184px;
   width: 41.184px;
-=======
-  height: 42px;
-  top: 300px;
-  right: 10px;
-  width: 42px;
-  text-align: center;
-  z-index: 1;
-  transition: all 650ms;
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
 }
 
-.playbtn:hover{
-  animation: pulse 1s 1;
+#playbtn:focus{
+  outline: none;
 }
 
 .disabledPlay{
@@ -644,7 +663,6 @@ body{
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
-<<<<<<< HEAD
 
 .alert{
   position: fixed;
@@ -1184,5 +1202,3 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   color: #1DA1F2;
   transform: scale(1.4);
 }
-=======
->>>>>>> 7195d7d0097cbdff579cde9af1e25b4f785b0ae3
