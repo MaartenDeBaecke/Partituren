@@ -5,8 +5,6 @@ body{
   overflow-x: hidden;
 }
 
-
-
 .banner{
   text-align: center;
   padding-top: 5rem;
@@ -37,7 +35,6 @@ body{
 
 .searchForm{
   margin: 10rem 0;
-
 }
 
 
@@ -62,16 +59,17 @@ body{
 
 
 .search:focus{
-  animation: expand 0.2s 1;
   width: 55%;
   background-color: rgba(0,0,0,0);
   font-family: 'Ubuntu Mono', monospace;
 }
+
 @media(max-width: 1000px){
   .search:focus{
     width: 65%;
   }
 }
+
 
 .searchLi{
   list-style: none;
@@ -174,6 +172,8 @@ body{
   font-size: 2.7rem;
   margin-bottom: 2rem;
 }
+
+
 
 
 .subBanDes{
@@ -381,6 +381,75 @@ body{
   border-radius: 0;
   border-bottom: 2px solid #eee;
 }
+
+@media (pointer:none), (pointer:coarse) {
+  .banner{
+    height: 100vh;
+    width: 101vw;
+    overflow: hidden !important;
+    background-position: 10% 0;
+  }
+
+  .nameTitle{
+    font-size: 4.7rem;
+    margin-top: 5rem;
+  }
+
+  .nameSubTitle{
+    font-size: 3.7rem;
+  }
+
+  .searchForm{
+    margin: 45% 0;
+  }
+
+  .search{
+    height: 70px;
+    width: 55%;
+    font-size: 3rem;
+    border-width: 5px;
+  }
+
+  .search:focus{
+    width: 75%;
+    background-color: rgba(0,0,0,0);
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
+  .btn {
+    width: 350px;
+    border-radius: 10px;
+    font-size: 48px !important;
+    height: 90px;
+
+    padding: 10px 0px !important;
+  }
+
+  #circle {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    border-radius: 50%;
+    position: static;
+    margin-top: -5px;
+    margin-left: 3.5rem;
+    overflow: hidden;
+    transition: 600ms;
+  }
+
+  .btn:hover #circle {
+    height: 37px;
+    width: 350px;
+    margin-top: -2.1rem;
+    margin-left: 0rem;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+  }
+
+}
+
+
+
 
 .clickOv{
   padding: 10px 37px 10px 37px;
