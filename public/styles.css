@@ -232,6 +232,8 @@ body{
   box-shadow: 4px -4px 14px 0px rgba(240,240,240,0.51);
 }
 
+
+
 @media(max-width: 1305px){
   .highlight{
     margin: 7rem 0 0 -5rem;
@@ -318,143 +320,6 @@ body{
     transform: scale(1.4,1.4);
     width: 8.6% !important;
     display: inline-block !important;
-  }
-}
-
-@media (pointer:none), (pointer:coarse) {
-  .banner{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden !important;
-    background-position: 10% 0;
-  }
-
-  .nameTitle{
-    font-size: 4.7rem;
-    margin-top: 5rem;
-  }
-
-  .nameSubTitle{
-    font-size: 3.7rem;
-  }
-
-  .searchForm{
-    margin: 45% 0;
-  }
-
-  .search{
-    height: 70px;
-    width: 55%;
-    font-size: 3rem;
-    border-width: 5px;
-  }
-
-  .search:focus{
-    width: 75%;
-    background-color: rgba(0,0,0,0);
-    font-family: 'Ubuntu Mono', monospace;
-  }
-
-  .btn {
-    width: 350px !important;
-    border-radius: 10px;
-    font-size: 48px !important;
-    height: 90px !important;
-    padding: 10px 0px !important;
-  }
-
-  #circle {
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    border-radius: 50%;
-    position: static;
-    margin-top: -5px;
-    margin-left: 3.5rem;
-    overflow: hidden;
-    transition: 600ms;
-  }
-
-  .btn:hover #circle {
-    height: 37px;
-    width: 350px;
-    margin-top: -2.1rem;
-    margin-left: 0rem;
-    border-radius: 0;
-    border-bottom: 2px solid #eee;
-  }
-
-  .subBanCont{
-    height: 80rem;
-    width: 100vw;
-  }
-
-  .subBanTitle{
-    font-size: 4rem !important;
-    margin-bottom: 4rem;
-  }
-
-  .subBanDes{
-    font-size: 2rem;
-  }
-
-  .highDes{
-    padding: 5rem !important;
-    margin-bottom: 8rem;
-  }
-
-  .subBanBtn{
-    margin: 0 0 0 38% !important;
-    top: -32.5rem;
-    transform: scale(2.2,2.2);
-  }
-
-  .highlight{
-    font-family: 'Merriweather', serif;
-    width: 518.5px;
-    height: 380px;
-    margin: -7rem 0 0 7rem;
-    display:flex;
-    perspective: 180px;
-    transform: scale(1.3, 1.3);
-  }
-
-  .hRow{
-    margin-left: 4rem !important;
-  }
-
-  .hcolOne #playbtn{
-    right: 15px !important;
-  }
-
-  .far-right {
-    perspective-origin: 100% 50%;
-
-  }
-
-  .hcolOne #description{
-    text-align: left;
-  }
-
-  .hcolOne #card{
-    box-shadow: 1px -1px 14px 0px rgba(240,240,240,0.51);
-  }
-
-
-  .hcolOne {
-    transform: rotateY(-5deg) rotateX(0.3deg);
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 0.7s;
-
-  }
-
-  .hcolOne:hover {
-    transform:  rotateY(-1deg);
-  }
-
-  .hcolOne:hover #card{
-    box-shadow: 4px -4px 14px 0px rgba(240,240,240,0.51);
   }
 }
 
@@ -641,7 +506,7 @@ body{
 
 
 .cardSub{
-  margin-top: 13.707px;
+  margin-top: 1px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 1.17rem;
@@ -799,13 +664,6 @@ body{
 	}
 }
 
-.alert{
-  position: fixed;
-    top:0;
-    background-color: #f00;
-    height: 100px; width: 100%;
-}
-
 .playLink{
   color: #ff3232;
 }
@@ -926,6 +784,7 @@ body{
     right: 15px !important;
   }
 }
+
 
 .noResults{
   width: 100%;
@@ -1112,6 +971,8 @@ input.ccheckbox{
 }
 
 
+
+
 .cInput::placeholder, .textarea::placeholder{
   border: none;
   color: rgb(250, 150, 150);
@@ -1197,6 +1058,8 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   }
 
 }
+
+
 
 /* Navbar */
 
@@ -1380,4 +1243,206 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 .twitter-logo{
   color: #1DA1F2;
   transform: scale(1.4);
+}
+
+
+
+@media (pointer:none), (pointer:coarse) {
+  .banner{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden !important;
+    background-position: 10% 0;
+  }
+
+  .nameTitle{
+    font-size: 4.7rem;
+    margin-top: 5rem;
+  }
+
+  .nameSubTitle{
+    font-size: 3.7rem;
+  }
+
+  .searchForm{
+    margin: 45% 0;
+  }
+
+  .search{
+    height: 70px;
+    width: 55%;
+    font-size: 3rem;
+    border-width: 5px;
+  }
+
+  .search:focus{
+    width: 75%;
+    background-color: rgba(0,0,0,0);
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
+  .btn {
+    width: 350px;
+    border-radius: 10px;
+    font-size: 45px !important;
+    height: 90px;
+    padding: 10px 0px !important;
+  }
+
+  #circle {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    border-radius: 50%;
+    position: static;
+    margin-top: -5px;
+    margin-left: 3.5rem;
+    overflow: hidden;
+    transition: 600ms;
+  }
+
+  .btn:hover #circle {
+    height: 37px;
+    width: 350px;
+    margin-top: -2.1rem;
+    margin-left: 0rem;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+  }
+
+  .subBanCont{
+    height: 80rem;
+    width: 100vw;
+  }
+
+  .subBanTitle{
+    font-size: 4rem !important;
+    margin-bottom: 4rem;
+  }
+
+  .subBanDes{
+    font-size: 2rem;
+  }
+
+  .highDes{
+    padding: 5rem !important;
+    margin-bottom: 8rem;
+  }
+
+  .subBanBtn{
+    margin: 0 0 0 32% !important;
+    top: -32.5rem;
+    transform: scale(2.2,2.2);
+  }
+
+  .highlight{
+    font-family: 'Merriweather', serif;
+    width: 518.5px;
+    height: 380px;
+    margin: -14rem 0 7rem 7rem;
+    display:flex;
+    perspective: 180px;
+  }
+
+
+  .cardContainer{
+    margin: 10rem 0;
+  }
+
+  #card{
+    transform: scale(1.4, 1.5);
+  }
+
+  #cardImg{
+    top: -0.5px;
+    height: 381px;
+  }
+
+  #description{
+    top: -0.5px;
+    padding-top: 25px;
+  }
+
+  #cardHeader{
+    left: 0rem;
+    transform: scale(1.15, 1.3);
+  }
+
+  .edit{
+    top: 32px !important;
+    left: -18px !important;
+    transform: scale(1.5);
+  }
+
+  .delete {
+    top: 106px !important;
+    left: -10px !important;
+  }
+
+
+  .cardSub{
+    font-size: 1.5rem;
+  }
+
+  .extras{
+    margin-top: 20.025px;
+    line-height: 1.2;
+    font-size: 1.25rem;
+  }
+
+  .desbtn{
+    font-size: 21.06px;
+  }
+
+  .buybtn{
+    transform: scale(1.1);
+    left: 18px;
+  }
+
+
+  #playbtn{
+    transform: scale(1.1);
+    left: 200px !important;
+  }
+
+
+  .catalogHeader{
+    font-size: 3.4rem;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 12%;
+  }
+
+  .col{
+    margin-left: 50px;
+  }
+
+
+  .hcolOne #card:hover #playbtn{
+    right: 15px !important;
+  }
+
+
+  .noResults{
+    width: 100%;
+    height: 7rem;
+    margin-top: 7rem;
+    text-align: center;
+  }
+
+  .noResText{
+    font-size: 5rem;
+    margin-top: 20rem;
+  }
+
+
+  .btnRe {
+    width: 195px;
+    color: #eee !important;
+    font-size: 25px !important;
+    height: 50px !important;
+    margin-top: 7rem;
+    transform: scale(1.7);
+    padding-top: 5px !important;
+  }
 }
