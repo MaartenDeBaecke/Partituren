@@ -50,8 +50,9 @@ const Nav = ({ searching }) => {
     <div>
       {clicked ? <PopUp name={name} popUp={value => setClicked(value)} /> : null }
 
-      <div className="navCont">
+
         {signIn ?
+          <div className="navContAf">
           <div>
             <form onSubmit={handleSubmit} className="navEl searchFN searchLogged">
               <input
@@ -64,15 +65,17 @@ const Nav = ({ searching }) => {
               />
             </form>
             <form className="inline-block" action="http://localhost:4000/logout">
-              <button className="navEl navAF" >Afmelden</button>
+              <button className="navEl" id="navAF" >Afmelden</button>
             </form>
           </div>
+          </div>
         :
-          <div>
-            <button className="navEl" onClick={clicking1}>Registreren</button>
-            <button className="navEl" onClick={clicking2} >Aanmelden</button>
+          <div className="navContIn">
 
-            <form onSubmit={handleSubmit} className="navEl searchFN">
+            <button className="navEl navEl2" onClick={clicking1}>Registreren</button>
+            <button className="navEl navEl2" onClick={clicking2} >Aanmelden</button>
+
+            <form onSubmit={handleSubmit} className="navEl navEl2 searchFN">
               <input
                 className="searchNav"
                 type="text" name="search"
@@ -82,10 +85,10 @@ const Nav = ({ searching }) => {
                 value={value}
               />
             </form>
+
           </div>
         }
       </div>
-    </div>
   );
 }
 

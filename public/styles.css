@@ -1064,7 +1064,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 /* Navbar */
 
 
-.navCont{
+.navContAf, .navContIn{
   background-color: rgba(0,7,49,0.87);
   margin: 12px 12px 0 0 ;
   height: auto;
@@ -1078,7 +1078,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   z-index: 15;
 }
 
-.navCont:hover{
+.navContAf:hover, navContIn:hover{
   background-color: rgba(0,7,49,0.99);
 }
 
@@ -1097,7 +1097,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   text-decoration: underline;
 }
 
-.navAF{
+#navAF{
   display: inline-block;
 }
 
@@ -1257,7 +1257,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
   .nameTitle{
     font-size: 4.7rem;
-    margin-top: 5rem;
+    margin-top: 9rem;
   }
 
   .nameSubTitle{
@@ -1311,7 +1311,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   }
 
   .subBanCont{
-    height: 80rem;
+    height: 90rem;
     width: 100vw;
   }
 
@@ -1331,7 +1331,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
   .subBanBtn{
     margin: 0 0 0 32% !important;
-    top: -32.5rem;
+    top: -29.5rem;
     transform: scale(2.2,2.2);
   }
 
@@ -1339,7 +1339,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     font-family: 'Merriweather', serif;
     width: 518.5px;
     height: 380px;
-    margin: -14rem 0 7rem 7rem;
+    margin: -10rem 0 7rem 7rem;
     display:flex;
     perspective: 180px;
   }
@@ -1445,4 +1445,81 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     transform: scale(1.7);
     padding-top: 5px !important;
   }
+
+  .navContIn{
+    transform: scale(2.3);
+    margin: 1rem 15.8rem 0rem 0 ;
+    width: 50vw;
+    text-align: left !important;
+  }
+
+  .navEl{
+    font-size: 1.3rem;
+  }
+
+  .navEl2{
+    margin-left: 2rem !important;
+    margin-right: -2rem;
+    display: inline-block;
+  }
+
+
+  .searchNav{
+    width: 8rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid #ff1932;
+    color: white;
+    text-align: center;
+    margin: 1rem 2.9rem 0 2rem;
+    transition: all 200ms;
+  }
+
+  .searchNav:focus{
+    outline: none;
+    margin: 1rem 0 0 0.5rem;
+    width: 10.2rem;
+  }
+
+  .searchNav::placeholder{
+    color: #b2b2b2;
+  }
+
+  .searchLogged{
+    display: inline-block;
+    margin: -2rem -2rem 0rem -2rem ;
+  }
+
+
+
+  .navContAf{
+    transform: scale(2.3);
+    margin: 2.5rem 12rem 0rem 0 ;
+    padding-right: 2rem;
+  }
+
+
+  .navContAf:hover{
+    margin: 2.5rem 17.5rem 0rem 0 ;
+  }
+
+  .searchNL{
+    width: 13rem;
+  }
+
+  .searchNL:focus{
+    width: 17rem ;
+    margin: 1rem 2.9rem 0 2.9rem;
+  }
+
+
+  .navContAf:hover{
+    background-color: rgba(0,7,49,0.99);
+    margin: 2.5rem 17.5rem 0rem 0 ;
+  }
+
+
+
+
+
 }
