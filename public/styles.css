@@ -5,8 +5,6 @@ body{
   overflow-x: hidden;
 }
 
-
-
 .banner{
   text-align: center;
   padding-top: 5rem;
@@ -37,7 +35,6 @@ body{
 
 .searchForm{
   margin: 10rem 0;
-
 }
 
 
@@ -62,16 +59,17 @@ body{
 
 
 .search:focus{
-  animation: expand 0.2s 1;
   width: 55%;
   background-color: rgba(0,0,0,0);
   font-family: 'Ubuntu Mono', monospace;
 }
+
 @media(max-width: 1000px){
   .search:focus{
     width: 65%;
   }
 }
+
 
 .searchLi{
   list-style: none;
@@ -160,7 +158,6 @@ body{
   min-height: 100vh;
 }
 
-
 .highDes{
   color: white;
   padding: 3% !important;
@@ -169,17 +166,16 @@ body{
   margin-bottom: 15rem;
 }
 
-
 .subBanTitle{
   font-size: 2.7rem;
   margin-bottom: 2rem;
 }
 
-
 .subBanDes{
   line-height: 1.7;
   font-size: 1.3rem;
 }
+
 
 .subBanBtn{
   margin: 0 0 0 45.4% !important;
@@ -189,6 +185,8 @@ body{
   width: 8.6% !important;
   display: inline-block !important;
 }
+
+
 
 
 .highlight{
@@ -233,6 +231,8 @@ body{
 .hcolOne:hover #card{
   box-shadow: 4px -4px 14px 0px rgba(240,240,240,0.51);
 }
+
+
 
 @media(max-width: 1305px){
   .highlight{
@@ -323,7 +323,6 @@ body{
   }
 }
 
-
 /* overzicht button */
 
 .btn {
@@ -387,6 +386,7 @@ body{
   margin: -15px;
   background-color: transparent;
 }
+
 
 
 /*Card*/
@@ -506,7 +506,7 @@ body{
 
 
 .cardSub{
-  margin-top: 13.707px;
+  margin-top: 1px;
   color: #b2b2b2;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 1.17rem;
@@ -664,13 +664,6 @@ body{
 	}
 }
 
-.alert{
-  position: fixed;
-    top:0;
-    background-color: #f00;
-    height: 100px; width: 100%;
-}
-
 .playLink{
   color: #ff3232;
 }
@@ -791,6 +784,7 @@ body{
     right: 15px !important;
   }
 }
+
 
 .noResults{
   width: 100%;
@@ -977,6 +971,8 @@ input.ccheckbox{
 }
 
 
+
+
 .cInput::placeholder, .textarea::placeholder{
   border: none;
   color: rgb(250, 150, 150);
@@ -1063,10 +1059,12 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 }
 
+
+
 /* Navbar */
 
 
-.navCont{
+.navContAf, .navContIn{
   background-color: rgba(0,7,49,0.87);
   margin: 12px 12px 0 0 ;
   height: auto;
@@ -1080,7 +1078,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   z-index: 15;
 }
 
-.navCont:hover{
+.navContAf:hover, navContIn:hover{
   background-color: rgba(0,7,49,0.99);
 }
 
@@ -1099,7 +1097,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   text-decoration: underline;
 }
 
-.navAF{
+#navAF{
   display: inline-block;
 }
 
@@ -1110,6 +1108,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .searchNav{
   width: 7rem;
+  max-width: 7rem;
   background-color: transparent;
   border: none;
   border-bottom: solid #ff1932;
@@ -1123,6 +1122,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   outline: none;
   margin: 1rem 0 0 0;
   width: 14rem;
+  max-width: 14rem;
 }
 
 .searchNav::placeholder{
@@ -1136,10 +1136,12 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .searchNL{
   width: 5.2rem;
+  max-width: 5.2rem
 }
 
 .searchNL:focus{
   width: 10rem;
+  max-width: 10rem;
   margin: 1rem 2.9rem 0 2.9rem;
 }
 
@@ -1245,4 +1247,389 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 .twitter-logo{
   color: #1DA1F2;
   transform: scale(1.4);
+}
+
+
+/* 404 */
+
+.notFound{
+  height: 100vh;
+}
+
+.errorTitle{
+  font-size: 3rem;
+}
+
+.errorSubTitle{
+  font-size: 1.7rem;
+  margin-top: 7rem;
+}
+
+.errorForm{
+  margin-top: 2.5rem;
+}
+
+.errorBtn{
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  margin-left: -0.2rem;
+}
+
+
+@media (pointer:none), (pointer:coarse) {
+  .banner{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden !important;
+    background-position: 10% 0;
+  }
+
+  .nameTitle{
+    font-size: 4.7rem;
+    margin-top: 9rem;
+  }
+
+  .nameSubTitle{
+    font-size: 3.7rem;
+  }
+
+  .searchForm{
+    margin: 45% 0;
+  }
+
+  .search{
+    height: 70px;
+    width: 55%;
+    max-width: 55%;
+    font-size: 3rem;
+    border-width: 5px;
+  }
+
+  .search:focus{
+    max-width: 75%;
+    width: 75%;
+    background-color: rgba(0,0,0,0);
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
+  .btn {
+    width: 350px;
+    border-radius: 10px;
+    font-size: 45px !important;
+    height: 90px;
+    padding: 10px 0px !important;
+  }
+
+  #circle {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    border-radius: 50%;
+    position: static;
+    margin-top: -5px;
+    margin-left: 3.5rem;
+    overflow: hidden;
+    transition: 600ms;
+  }
+
+  .btn:hover #circle {
+    height: 37px;
+    width: 350px;
+    margin-top: -2.1rem;
+    margin-left: 0rem;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+  }
+
+  .subBanCont{
+    height: 90rem;
+    width: 100vw;
+  }
+
+  .subBanTitle{
+    font-size: 4rem !important;
+    margin-bottom: 4rem;
+  }
+
+  .subBanDes{
+    font-size: 2rem;
+  }
+
+  .highDes{
+    padding: 5rem !important;
+    margin-bottom: 8rem;
+  }
+
+  .subBanBtn{
+    margin: 0 0 0 32% !important;
+    top: -29.5rem;
+    transform: scale(2.2,2.2);
+  }
+
+  .highlight{
+    font-family: 'Merriweather', serif;
+    width: 518.5px;
+    height: 380px;
+    margin: -10rem 0 7rem 7rem;
+    display:flex;
+    perspective: 180px;
+  }
+
+
+  .cardContainer{
+    margin: 10rem 0;
+  }
+
+  #card{
+    transform: scale(1.4, 1.5);
+  }
+
+  #cardImg{
+    top: -0.5px;
+    height: 381px;
+  }
+
+  #description{
+    top: -0.5px;
+    padding-top: 25px;
+  }
+
+  #cardHeader{
+    left: 0rem;
+    transform: scale(1.15, 1.3);
+  }
+
+  .edit{
+    top: 32px !important;
+    left: -18px !important;
+    transform: scale(1.5);
+  }
+
+  .delete {
+    top: 106px !important;
+    left: -10px !important;
+  }
+
+
+  .cardSub{
+    font-size: 1.5rem;
+  }
+
+  .extras{
+    margin-top: 20.025px;
+    line-height: 1.2;
+    font-size: 1.25rem;
+  }
+
+  .desbtn{
+    font-size: 21.06px;
+  }
+
+  .buybtn{
+    transform: scale(1.1);
+    left: 18px;
+  }
+
+
+  #playbtn{
+    transform: scale(1.1);
+    left: 200px !important;
+  }
+
+
+  .catalogHeader{
+    font-size: 3.4rem;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 12%;
+  }
+
+  .col{
+    margin-left: 50px;
+  }
+
+
+  .hcolOne #card:hover #playbtn{
+    right: 15px !important;
+  }
+
+
+  .noResults{
+    width: 100%;
+    height: 7rem;
+    margin-top: 7rem;
+    text-align: center;
+  }
+
+  .noResText{
+    font-size: 5rem;
+    margin-top: 20rem;
+  }
+
+
+  .btnRe {
+    width: 195px;
+    color: #eee !important;
+    font-size: 25px !important;
+    height: 50px !important;
+    margin-top: 7rem;
+    transform: scale(1.7);
+    padding-top: 5px !important;
+  }
+
+  .navContIn{
+    transform: scale(2.3);
+    margin: 1rem 15.8rem 0rem 0 ;
+    width: 50vw;
+    text-align: left !important;
+  }
+
+  .navEl{
+    font-size: 1.3rem;
+  }
+
+  .navEl2{
+    margin-left: 2rem !important;
+    margin-right: -2rem;
+    display: inline-block;
+  }
+
+
+  .searchNav{
+    max-width: 8rem;
+    width: 8rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid #ff1932;
+    color: white;
+    text-align: center;
+    margin: 1rem 2.9rem 0 2rem;
+    transition: all 200ms;
+  }
+
+  .searchNav:focus{
+    outline: none;
+    margin: 1rem 0 0 0.5rem;
+    max-width: 10.2rem;
+    width: 10.2rem;
+  }
+
+  .searchNav::placeholder{
+    color: #b2b2b2;
+  }
+
+  .searchLogged{
+    display: inline-block;
+    margin: -2rem -2rem 0rem -2rem ;
+  }
+
+
+
+  .navContAf{
+    transform: scale(2.3);
+    margin: 2.5rem 12rem 0rem 0 ;
+    padding-right: 2rem;
+  }
+
+
+  .navContAf:hover{
+    margin: 2.5rem 17.5rem 0rem 0 ;
+  }
+
+  .searchNL{
+    max-width: 13rem;
+    width: 13rem;
+  }
+
+  .searchNL:focus{
+    max-width: 17rem;
+    width: 17rem;
+    margin: 1rem 2.9rem 0 2.9rem;
+  }
+
+
+  .navContAf:hover{
+    background-color: rgba(0,7,49,0.99);
+    margin: 2.5rem 17.5rem 0rem 0 ;
+  }
+
+  .popCont{
+    margin: 0 10%;
+  }
+
+
+  .popCard{
+    background-color: white;
+    height: 55rem;
+    width: 80%;
+    padding: 42px;
+    text-align: center;
+    position:fixed;
+
+    top:15%;
+    font-size:
+    border-radius: 7px;
+
+    -webkit-backface-visibility: hidden;
+  }
+
+  .popTitle{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 5.5rem;
+  }
+
+  .close{
+    position: absolute;
+    top: 50px;
+    right: 54px;
+    transform: scale(3);
+  }
+
+  .google-button {
+    transform: scale(3);
+    margin-top: 8rem;
+  }
+
+  .google-button:hover, .google-button:focus{
+    transform: scale(3) skewX(-0.7deg);
+  }
+
+
+  .spotify-button{
+    margin-top: 8rem;
+  }
+
+  .twitter-logo{
+    color: #1DA1F2;
+    transform: scale(1.4);
+  }
+
+  .errorTitle{
+    width: 80%;
+    font-size: 5.4rem;
+    margin: 10rem auto;
+  }
+
+
+  .errorSubTitle{
+    font-size: 3rem;
+    margin-top: 15rem;
+  }
+
+  .errorForm{
+    margin-top: 4rem;
+  }
+
+  .errorBtn{
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    margin-left: -0.2rem;
+  }
+
+
 }
