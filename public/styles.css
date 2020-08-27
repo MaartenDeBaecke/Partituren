@@ -1250,6 +1250,33 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 }
 
 
+/* 404 */
+
+.notFound{
+  height: 100vh;
+}
+
+.errorTitle{
+  font-size: 3rem;
+}
+
+.errorSubTitle{
+  font-size: 1.7rem;
+  margin-top: 7rem;
+}
+
+.errorForm{
+  margin-top: 2.5rem;
+}
+
+.errorBtn{
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  margin-left: -0.2rem;
+}
+
 
 @media (pointer:none), (pointer:coarse) {
   .banner{
@@ -1578,6 +1605,30 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   .twitter-logo{
     color: #1DA1F2;
     transform: scale(1.4);
+  }
+
+  .errorTitle{
+    width: 80%;
+    font-size: 5.4rem;
+    margin: 10rem auto;
+  }
+
+
+  .errorSubTitle{
+    font-size: 3rem;
+    margin-top: 15rem;
+  }
+
+  .errorForm{
+    margin-top: 4rem;
+  }
+
+  .errorBtn{
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    margin-left: -0.2rem;
   }
 
 
