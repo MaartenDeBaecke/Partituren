@@ -1108,6 +1108,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .searchNav{
   width: 7rem;
+  max-width: 7rem;
   background-color: transparent;
   border: none;
   border-bottom: solid #ff1932;
@@ -1121,6 +1122,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   outline: none;
   margin: 1rem 0 0 0;
   width: 14rem;
+  max-width: 14rem;
 }
 
 .searchNav::placeholder{
@@ -1134,10 +1136,12 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 .searchNL{
   width: 5.2rem;
+  max-width: 5.2rem
 }
 
 .searchNL:focus{
   width: 10rem;
+  max-width: 10rem;
   margin: 1rem 2.9rem 0 2.9rem;
 }
 
@@ -1271,11 +1275,13 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   .search{
     height: 70px;
     width: 55%;
+    max-width: 55%;
     font-size: 3rem;
     border-width: 5px;
   }
 
   .search:focus{
+    max-width: 75%;
     width: 75%;
     background-color: rgba(0,0,0,0);
     font-family: 'Ubuntu Mono', monospace;
@@ -1465,6 +1471,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
 
 
   .searchNav{
+    max-width: 8rem;
     width: 8rem;
     background-color: transparent;
     border: none;
@@ -1478,6 +1485,7 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   .searchNav:focus{
     outline: none;
     margin: 1rem 0 0 0.5rem;
+    max-width: 10.2rem;
     width: 10.2rem;
   }
 
@@ -1504,11 +1512,13 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   }
 
   .searchNL{
+    max-width: 13rem;
     width: 13rem;
   }
 
   .searchNL:focus{
-    width: 17rem ;
+    max-width: 17rem;
+    width: 17rem;
     margin: 1rem 2.9rem 0 2.9rem;
   }
 
@@ -1518,8 +1528,57 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
     margin: 2.5rem 17.5rem 0rem 0 ;
   }
 
+  .popCont{
+    margin: 0 10%;
+  }
 
 
+  .popCard{
+    background-color: white;
+    height: 55rem;
+    width: 80%;
+    padding: 42px;
+    text-align: center;
+    position:fixed;
+
+    top:15%;
+    font-size:
+    border-radius: 7px;
+
+    -webkit-backface-visibility: hidden;
+  }
+
+  .popTitle{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 5.5rem;
+  }
+
+  .close{
+    position: absolute;
+    top: 50px;
+    right: 54px;
+    transform: scale(3);
+  }
+
+  .google-button {
+    transform: scale(3);
+    margin-top: 8rem;
+  }
+
+  .google-button:hover, .google-button:focus{
+    transform: scale(3) skewX(-0.7deg);
+  }
+
+
+  .spotify-button{
+    margin-top: 8rem;
+  }
+
+  .twitter-logo{
+    color: #1DA1F2;
+    transform: scale(1.4);
+  }
 
 
 }
