@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import EditCard from "./EditCard";
 import CreateCard from "./CreateCard";
@@ -19,16 +19,20 @@ function App() {
   return(
 
     <Router>
-      <Route path="/" exact component={Home} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route component={NotFound} />
+      </Switch>
       {permission ?
         <div>
           <Route path="/edit/:id" component={EditCard} />
           <Route path="/create" component={CreateCard} />
-          <Route path="*" component={NotFound} />
+
         </div>
       :
         null
       }
+
 
     </Router>
 

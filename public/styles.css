@@ -5,6 +5,72 @@ body{
   overflow-x: hidden;
 }
 
+/* Loader */
+.root {
+  background-color: #000731;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader{
+  width: 16%;
+  height: 5%;
+  margin: 0 auto;
+}
+
+.block{
+  position: absolute;
+  display: inline-block;
+  width: 1.2%;
+  background-color: white;
+  animation: move 0.8s infinite;
+  animation-timing-function: linear;
+}
+
+.one{
+  left: 45.8%;
+}
+
+.two{
+  left: 47.8%;
+  animation-delay: 0.3s;
+}
+
+.three{
+  left: 49.8%;
+  animation-delay: 0.42s;
+}
+
+.four{
+  left: 51.8%;
+  animation-delay: 0.45;
+}
+
+.five{
+  left: 53.8%;
+  animation-delay: 0.62s;
+}
+
+@keyframes move {
+  0% {
+    top: 44.8%;
+    height: 1.2%;
+  } 50% {
+    top: 41%;
+    height: 5%;
+  } 100% {
+    top: 44.8%;
+    height: 1.2%;
+  }
+}
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+/* end */
+
 .banner{
   text-align: center;
   padding-top: 5rem;
@@ -1275,6 +1341,10 @@ box-shadow: inset 0px 0px 109px -41px rgba(0,0,0,0.75);
   outline: none;
   border: none;
   margin-left: -0.2rem;
+}
+
+.errorBtn:focus{
+  outline: none;
 }
 
 
